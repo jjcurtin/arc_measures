@@ -1,0 +1,5 @@
+# Added dS and dI to match new scoring conventions- Megan F 2018_March
+# Note: MDQ is officially scored on a scale from 0 to 4. Range selected as 1 to 5 based on lab convention.
+# Score correction as -78 to adjust for scale shift to 1 through 5
+
+dS$MDQ_TOT= varScore(dI, Forward= c('MDQ1', 'MDQ2', 'MDQ4', 'MDQ5', 'MDQ6', 'MDQ7','MDQ8', 'MDQ9', 'MDQ10','MDQ11', 'MDQ12', 'MDQ13','MDQ15', 'MDQ16', 'MDQ17','MDQ18', 'MDQ19', 'MDQ20', 'MDQ21','MDQ22', 'MDQ23', 'MDQ24', 'MDQ25', 'MDQ26', 'MDQ27', 'MDQ28', 'MDQ30','MDQ31', 'MDQ32', 'MDQ33', 'MDQ34', 'MDQ35', 'MDQ36', 'MDQ37', 'MDQ38','MDQ39', 'MDQ40', 'MDQ41', 'MDQ42', 'MDQ43', 'MDQ44','MDQ45', 'MDQ46', 'MDQ47','MDQ48', 'MDQ49', 'MDQ50','MDQ51', 'MDQ52', 'MDQ53','MDQ54', 'MDQ55', 'MDQ56', 'MDQ57','MDQ58', 'MDQ59', 'MDQ60', 'MDQ61', 'MDQ62', 'MDQ63', 'MDQ64', 'MDQ65','MDQ66', 'MDQ67', 'MDQ68', 'MDQ69', 'MDQ70', 'MDQ71', 'MDQ72', 'MDQ73', 'MDQ74', 'MDQ75', 'MDQ77', 'MDQ78'), Reverse= c('MDQ3','MDQ14','MDQ29','MDQ76'), Range = c(1,5) ) - 78

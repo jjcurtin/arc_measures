@@ -1,0 +1,13 @@
+The full version of the MPQ, of which the MPQ-BF is a subset, is authored by Auke Tellegen and is copyrighted by the University of Minnesota Press.
+
+The reference for the brief form is:
+Patrick, C. J., Curtin, J. J., & Tellegen, A. (2002). Development and validation of a brief form of the Multidimensional Personality Questionnaire (MPQ). Psychological Assessment, 14, 150-163.
+
+The MPQ-BF was developed for use in research studies.  The test protocol, together with a scoring program (authored by John Curtin) and scoring instructions, can be obtained by request from the publisher.  The contact person is:
+	Beverly Kaemmer
+	Assistant Director / Test Manager
+	University of Minnesota Press
+	Suite 290
+	111 Third Avenue South
+	Minneapolis, MN 55401
+	Email:  kaemm002@ maroon.tc.umn.edu

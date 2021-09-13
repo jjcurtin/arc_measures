@@ -1,0 +1,1835 @@
+/* filename = sq_mpe.cpp
+	12/16/98
+	version 2.1a
+	Created by John Curtin, Christopher Patrick and Emily Daughtrey
+
+	Questionnaire scoring program for MPQ Easy version (155 items).
+	(155 items version)
+*/
+
+//prototypes for functions defined at end of code
+int	round(float number);   	//for rounding scale scores to integer value
+void	Setup();						//reminder on coding of true/false
+
+//individual functions for converting raw to T score for each scale
+int ConvertWBT(int Score, int MissValue);
+int ConvertSPT(int Score, int MissValue);
+int ConvertACT(int Score, int MissValue);
+int ConvertSCT(int Score, int MissValue);
+int ConvertSRT(int Score, int MissValue);
+int ConvertALT(int Score, int MissValue);
+int ConvertAGT(int Score, int MissValue);
+int ConvertCLT(int Score, int MissValue);
+int ConvertHAT(int Score, int MissValue);
+int ConvertTDT(int Score, int MissValue);
+int ConvertABT(int Score, int MissValue);
+
+int ConvertPEMT(int Score, int MissValue);
+int ConvertNEMT(int Score, int MissValue);
+int ConvertCONT(int Score, int MissValue);
+int ConvertPAGT(int Score, int MissValue);
+int ConvertPCOT(int Score, int MissValue);
+int ConvertNAGT(int Score, int MissValue);
+int ConvertNALT(int Score, int MissValue);
+
+int ConvertUVT(int Score, int MissValue);
+int ConvertVRINT(int Score, int MissValue);
+int ConvertTRINT(int Score, int MissValue);
+
+
+
+#include "TQFile.cpp"
+#include <ctype.h>
+#include <math.h>
+
+void main()
+{
+////////////////////////////////////////////////////////////////////////////
+
+	cout	<<	"Scoring Program for the MPQ Easy version (155 items)\n"
+			<<	"MPE scoring version 2.1a (Dec. 98)\n";
+
+
+////////////////////////////////////////////////////////////////////////////
+
+	//Declares a Questionnaire Object.
+	//Must put the low end of rating scale and high end of rating scale as it should
+	//be scored (i.e., the way the rating scale was originally designed
+	//as parameters (lowend, highend).
+	TQFile	Q(0,1);
+
+	Setup();
+
+
+////////////////////////////////////////////////////////////////////////////
+	//Declares a variable for each scale that will be scored.
+
+	//raw content
+	float	WellBeing155;
+	float SocialPotency155;
+	float Achieve155;
+	float SocialClose155;
+	float StressReact155;
+	float Alienation155;
+	float Aggression155;
+	float Control155;
+	float HarmAvoid155;
+	float Tradition155;
+	float Absorption155;
+
+
+	//t score content
+	float	WellBeingT;
+	float SocialPotencyT;
+	float AchieveT;
+	float SocialCloseT;
+	float StressReactT;
+	float AlienationT;
+	float AggressionT;
+	float ControlT;
+	float HarmAvoidT;
+	float TraditionT;
+	float AbsorptionT;
+
+	//raw broad trait
+	float PEM;
+	float NEM;
+	float CON;
+	float PAG;
+	float PCO;
+	float NAG;
+	float NAL;
+
+	//T broad trait
+	float PEMT;
+	float NEMT;
+	float CONT;
+	float PAGT;
+	float PCOT;
+	float NAGT;
+	float NALT;
+
+	//raw and T validity
+	float UnlikeVirtue;
+	float UnlikeVirtueT;
+	float VRIN;
+	float VRINT;
+	float TRIN;
+	float TRINT;
+	float	Invalid;
+
+////////////////////////////////////////////////////////////////////////////
+//inserts scale names in header of output file.
+//Scale names are listed in the order in which they are output
+
+		//content scales
+		Q.Insert_Scale_Name("MPE_wbR");
+		Q.Insert_Scale_Name("MPE_spR");
+		Q.Insert_Scale_Name("MPE_acR");
+		Q.Insert_Scale_Name("MPE_scR");
+		Q.Insert_Scale_Name("MPE_stR");
+		Q.Insert_Scale_Name("MPE_alR");
+		Q.Insert_Scale_Name("MPE_agR");
+		Q.Insert_Scale_Name("MPE_clR");
+		Q.Insert_Scale_Name("MPE_haR");
+		Q.Insert_Scale_Name("MPE_tdR");
+		Q.Insert_Scale_Name("MPE_abR");
+
+		//broad trait
+		Q.Insert_Scale_Name("MPE_PER");
+		Q.Insert_Scale_Name("MPE_NER");
+		Q.Insert_Scale_Name("MPE_COR");
+		Q.Insert_Scale_Name("MPE_PGR");
+		Q.Insert_Scale_Name("MPE_PCR");
+		Q.Insert_Scale_Name("MPE_NGR");
+		Q.Insert_Scale_Name("MPE_NLR");
+
+		//validity
+		Q.Insert_Scale_Name("MPE_uvR");
+		Q.Insert_Scale_Name("MPE_trR");
+		Q.Insert_Scale_Name("MPE_vrR");
+
+		// T content
+		Q.Insert_Scale_Name("MPE_wbT");
+		Q.Insert_Scale_Name("MPE_spT");
+		Q.Insert_Scale_Name("MPE_acT");
+		Q.Insert_Scale_Name("MPE_scT");
+		Q.Insert_Scale_Name("MPE_stT");
+		Q.Insert_Scale_Name("MPE_alT");
+		Q.Insert_Scale_Name("MPE_agT");
+		Q.Insert_Scale_Name("MPE_clT");
+		Q.Insert_Scale_Name("MPE_haT");
+		Q.Insert_Scale_Name("MPE_tdT");
+		Q.Insert_Scale_Name("MPE_abT");
+
+		//T broad trait
+		Q.Insert_Scale_Name("MPE_PET");
+		Q.Insert_Scale_Name("MPE_NET");
+		Q.Insert_Scale_Name("MPE_COT");
+		Q.Insert_Scale_Name("MPE_PGT");
+		Q.Insert_Scale_Name("MPE_PCT");
+		Q.Insert_Scale_Name("MPE_NGT");
+		Q.Insert_Scale_Name("MPE_NLT");
+
+		//T validity
+		Q.Insert_Scale_Name("MPE_uvT");
+		Q.Insert_Scale_Name("MPE_trT");
+		Q.Insert_Scale_Name("MPE_vrT");
+
+		Q.Insert_Scale_Name("MPE_inv");
+
+
+		Q.Output_File_Header();			//outputs the above scale names to file
+
+///////////////////////////////////////////////////////////////////////////
+	Q.Set_Missing_Percent(.25);   //set max % of Items missing for valid scale
+
+	while (Q.Get_Subjects_Items())     //loop through each subject
+	{
+
+		//Scoring for 155 content scales.
+
+		//scoring system for Wellbeing
+		Q.Reset_Item_Counts();			//resets a counter of # of items in scale
+		//Q.Item(n) returns the value of that item number
+		//Q.Rev_Item(n) reverse scores that item
+		WellBeing155 = Q.Rev_Item(1) + Q.Rev_Item(26) + Q.Rev_Item(38)
+		+ Q.Rev_Item(50) + Q.Rev_Item(62) + Q.Rev_Item (74)
+		+ Q.Rev_Item(85) + Q.Rev_Item(97) + Q.Rev_Item(109)
+		+ Q.Rev_Item(121) + Q.Rev_Item(133) + Q.Rev_Item(144);
+		//prorates for missing items.  If % of missing items is greater than that set above
+		//it will return missing value code.
+		//Prorating uses this formula   Proscore = Score * (# total items/# nonmissing items)
+		WellBeing155 = Q.Prorate_Scale(WellBeing155);
+		WellBeing155 = round(WellBeing155);  				//rounds to integer value (only needed if prorated)
+
+		//scoring system for Social Potency
+		Q.Reset_Item_Counts();
+		SocialPotency155 = Q.Rev_Item(2) + Q.Rev_Item(15) + Q.Rev_Item(39)
+		+ Q.Rev_Item(51) + Q.Rev_Item(75) + Q.Rev_Item(87)
+		+ Q.Rev_Item(110) + Q.Item(63) + Q.Item(98)
+		+ Q.Item(122) + Q.Item(134) + Q.Item(145);
+		SocialPotency155 = Q.Prorate_Scale(SocialPotency155);
+		SocialPotency155 = round(SocialPotency155);
+
+		//scoring system for Achievement
+		Q.Reset_Item_Counts();
+		Achieve155 = Q.Rev_Item(3) + Q.Rev_Item(16) + Q.Rev_Item(27)
+		+ Q.Rev_Item(52) + Q.Rev_Item(76) + Q.Rev_Item(88)
+		+ Q.Rev_Item(111) + Q.Rev_Item(123) + Q.Rev_Item(135)
+		+ Q.Rev_Item(146) + Q.Item(64) + Q.Item(99);
+		Achieve155 = Q.Prorate_Scale(Achieve155);
+		Achieve155 = round(Achieve155);
+
+		//scoring system for Social Closeness
+		Q.Reset_Item_Counts();
+		SocialClose155 = Q.Rev_Item(5) + Q.Rev_Item(17) + Q.Rev_Item(77)
+		+ Q.Rev_Item(112) + Q.Item(28) + Q.Rev_Item(40)
+		+ Q.Item(65) + Q.Item(89) + Q.Item(100) + Q.Item(124)
+		+ Q.Item(136) + Q.Item(148);
+		SocialClose155 = Q.Prorate_Scale(SocialClose155);
+		SocialClose155 = round(SocialClose155);
+
+		//scoring system for Stress Reaction
+		Q.Reset_Item_Counts();
+		StressReact155 = Q.Rev_Item(6) +Q.Rev_Item(18)+ Q.Rev_Item(29)
+		+ Q.Rev_Item(41) + Q.Rev_Item(53) + Q.Rev_Item(78)
+		+ Q.Rev_Item(90) + Q.Rev_Item(101) + Q.Rev_Item(113)
+		+ Q.Rev_Item(125) + Q.Rev_Item(137) + Q.Rev_Item(149);
+		StressReact155 = Q.Prorate_Scale(StressReact155);
+		StressReact155 = round(StressReact155);
+
+		//scoring system for Alienation
+		Q.Reset_Item_Counts();
+		Alienation155 = Q.Rev_Item(7) + Q.Rev_Item(19) + Q.Rev_Item(30)
+		+ Q.Rev_Item(42) + Q.Rev_Item(54) + Q.Rev_Item(66)
+		+ Q.Rev_Item(91) + Q.Rev_Item(102) + Q.Rev_Item(114)
+		+ Q.Rev_Item(126) + Q.Rev_Item(138) + Q.Rev_Item(150);
+		Alienation155 = Q.Prorate_Scale(Alienation155);
+		Alienation155 = round(Alienation155);
+
+		//scoring system for Aggression
+		Q.Reset_Item_Counts();
+		Aggression155 = Q.Rev_Item(8) + Q.Rev_Item(20) + Q.Rev_Item(31)
+		+ Q.Rev_Item(43) + Q.Rev_Item(55) + Q.Rev_Item(67)
+		+ Q.Rev_Item(103) + Q.Rev_Item(115) + Q.Rev_Item(127)
+		+ Q.Rev_Item(139) + Q.Rev_Item(151) + Q.Item(79);
+		Aggression155 = Q.Prorate_Scale(Aggression155);
+		Aggression155 = round(Aggression155);
+
+		//scoring system for Control
+		Q.Reset_Item_Counts();
+		Control155 = Q.Rev_Item(9) + Q.Rev_Item(44) + Q.Rev_Item(56)
+		+ Q.Rev_Item(68) + Q.Rev_Item(92) + Q.Rev_Item(116)
+		+ Q.Rev_Item(128) + Q.Rev_Item(140) + Q.Item(21)
+		+ Q.Item(33) + Q.Item(80) + Q.Item(152);
+		Control155 = Q.Prorate_Scale(Control155);
+		Control155 = round(Control155);
+
+		//scoring system for Harm Avoidance
+		Q.Reset_Item_Counts();
+		HarmAvoid155 = Q.Rev_Item(34) + Q.Rev_Item(69) + Q.Rev_Item(81)
+		+ Q.Rev_Item(93) + Q.Rev_Item(105) + Q.Rev_Item(129)
+		+ Q.Item(11) + Q.Item(22) + Q.Item(46)
+		+ Q.Item(57) + Q.Item(141) + Q.Item(153);
+		HarmAvoid155 = Q.Prorate_Scale(HarmAvoid155);
+		HarmAvoid155 = round(HarmAvoid155);
+
+		//scoring system for Traditionalism
+		Q.Reset_Item_Counts();
+		Tradition155 = Q.Rev_Item(12) + Q.Rev_Item(23) + Q.Rev_Item(35)
+		+ Q.Rev_Item(58) + Q.Rev_Item(70) + Q.Rev_Item(82)
+		+ Q.Rev_Item(94) + Q.Rev_Item(106) + Q.Rev_Item(142)
+		+ Q.Rev_Item(154) + Q.Item(47) + Q.Item(118);
+		Tradition155 = Q.Prorate_Scale(Tradition155);
+		Tradition155 = round(Tradition155);
+
+		//scoring system for Absorption
+		Q.Reset_Item_Counts();
+		Absorption155 = Q.Rev_Item(13) + Q.Rev_Item(24) + Q.Rev_Item(36)
+		+ Q.Rev_Item(48) + Q.Rev_Item(59) + Q.Rev_Item(71)
+		+ Q.Rev_Item(83) + Q.Rev_Item(95) + Q.Rev_Item(107)
+		+ Q.Rev_Item(119) + Q.Rev_Item(130) + Q.Rev_Item(155);
+		Absorption155 = Q.Prorate_Scale(Absorption155);
+		Absorption155 = round(Absorption155);
+
+////////////////////////////////////////////////////////////////////////////
+//CALCULATE BROAD TRAIT SCALES
+
+		//check if any content scales are missing.  If so, all Trait scales are set to missing
+		if(WellBeing155 == Q.Return_Missing_Code()   || SocialPotency155 == Q.Return_Missing_Code() ||
+			Achieve155 == Q.Return_Missing_Code()     || SocialClose155 == Q.Return_Missing_Code() ||
+			StressReact155 == Q.Return_Missing_Code() || Alienation155 == Q.Return_Missing_Code() ||
+			Aggression155 == Q.Return_Missing_Code()  || Control155 == Q.Return_Missing_Code() ||
+			HarmAvoid155 == Q.Return_Missing_Code()   || Tradition155 == Q.Return_Missing_Code())
+		{
+			PEM = Q.Return_Missing_Code();
+			NEM = Q.Return_Missing_Code();
+			CON = Q.Return_Missing_Code();
+			PAG = Q.Return_Missing_Code();
+			PCO = Q.Return_Missing_Code();
+			NAG = Q.Return_Missing_Code();
+			NAL = Q.Return_Missing_Code();
+		}
+		else   //otherwise score trait scales
+		{
+			PEM = 1.933*WellBeing155 + 1.669*SocialPotency155 + 1.671*Achieve155
+				+ 1.950*SocialClose155 + 0.085*StressReact155 + 0.292*Alienation155
+				+ 0.130*Aggression155 + 0.048*Control155 + 0.015*HarmAvoid155
+				+ 0.070*Tradition155 +13.712;
+			PEM = round(PEM);
+
+			NEM = 0.127*WellBeing155 + 0.150*SocialPotency155 + 0.038*Achieve155
+				+ 0.279*SocialClose155 + 1.904*StressReact155 + 3.061*Alienation155
+				+ 2.551*Aggression155 + 0.045*Control155 + 0.126*HarmAvoid155
+				+ 0.147*Tradition155 + 6.270;
+			NEM = round(NEM);
+
+			CON = -0.085*WellBeing155 - 0.052*SocialPotency155 + 0.241*Achieve155
+				- 0.068*SocialClose155 + 0.046* StressReact155 - 0.302*Alienation155
+				+ 0.296*Aggression155 + 2.717*Control155 + 2.579*HarmAvoid155
+				+ 2.199*Tradition155 + 20.742;
+			CON = round(CON);
+
+			PAG = 1.529*WellBeing155 + 1.294*SocialPotency155 + 3.211*Achieve155
+				- 0.317*SocialClose155 - 0.112* StressReact155 - 0.085*Alienation155
+				+ 0.063*Aggression155 + 0.154*Control155 - 0.186*HarmAvoid155
+				+ 0.020*Tradition155 + 18.448;
+			PAG = round(PAG);
+
+			PCO = 1.582*WellBeing155 + 1.387*SocialPotency155 - 0.510*Achieve155
+				+ 3.411*SocialClose155 + 0.048*StressReact155 + 0.017*Alienation155
+				+ 0.059*Aggression155 - 0.068*Control155 + 0.205*HarmAvoid155
+				+ 0.097*Tradition155 + 16.804;
+			PCO = round(PCO);
+
+			NAG = 0.042*WellBeing155 + 0.111*SocialPotency155 - 0.036*Achieve155
+				- 0.070*SocialClose155 + 1.721*StressReact155 - 0.885*Alienation155
+				+ 5.260*Aggression155 + 0.106*Control155 + 0.130*HarmAvoid155
+				+ 0.057*Tradition155 + 22.739;
+			NAG = round(NAG);
+
+			NAL = -0.043*WellBeing155 - 0.072*SocialPotency155 + 0.059*Achieve155
+				+ 0.206*SocialClose155 + 1.389*StressReact155 + 5.398*Alienation155
+				- 0.695*Aggression155 - 0.114*Control155 - 0.025*HarmAvoid155
+				+ 0.089*Tradition155 +20.341;
+			NAL = round(NAL);
+	}
+
+
+////////////////////////////////////////////////////////////////////////////
+//SCORING OF THE VALIDITY SCALES
+
+		//scoring system for Unlikely Virtues (14 items)
+		Q.Reset_Item_Counts();
+		UnlikeVirtue = Q.Rev_Item(25) + Q.Rev_Item(49) + Q.Rev_Item(72)
+		+ Q.Rev_Item(96) + Q.Rev_Item(120) + Q.Rev_Item(143)
+		+ Q.Rev_Item(147) + Q.Item(4) + Q.Item(14) + Q.Item(37)
+		+ Q.Item(61) + Q.Item(84) + Q.Item(108) + Q.Item(131);
+		UnlikeVirtue = Q.Prorate_Scale(UnlikeVirtue);
+		UnlikeVirtue = round(UnlikeVirtue);
+
+
+	//scoring system for TRIN
+	//if both items in pair are not missing and both are true, give a point
+	//if both items in pair are not missing and both are false, subtract a point
+
+		//Scoring true pairs
+		float TRINTRUE =0;
+		if(!Q.Missing_Item(28) && !Q.Missing_Item(112) && (Q.Rev_Item(28)==1) && (Q.Rev_Item(112)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(52) && !Q.Missing_Item(64) && (Q.Rev_Item(52)==1) && (Q.Rev_Item(64)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(70) && !Q.Missing_Item(118) && (Q.Rev_Item(70)==1) && (Q.Rev_Item(118)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(99) && !Q.Missing_Item(146) && (Q.Rev_Item(99)==1) && (Q.Rev_Item(146)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(5) && !Q.Missing_Item(136) && (Q.Rev_Item(5)==1) && (Q.Rev_Item(136)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(20) && !Q.Missing_Item(79) && (Q.Rev_Item(20)==1) && (Q.Rev_Item(79)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(15) && !Q.Missing_Item(98) && (Q.Rev_Item(15)==1) && (Q.Rev_Item(98)==1))
+		{TRINTRUE++;}
+		if(!Q.Missing_Item(110) && !Q.Missing_Item(145) && (Q.Rev_Item(110)==1) && (Q.Rev_Item(145)==1))
+		{TRINTRUE++;}
+
+		//count missing true pairs.  Pair is missing if a) both items are missing, or
+		//b) one item missing, other item is true.  If one missing and other is false
+		//then it is not considered missing b/c we know that it couldnt have been a true/true pair
+		int MISSTRUE=0;
+		if((Q.Missing_Item(28) && Q.Missing_Item(112)) || (Q.Missing_Item(28) && Q.Rev_Item(112)==1) ||
+						 (Q.Missing_Item(112) && Q.Rev_Item(28) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(52) && Q.Missing_Item(64)) || (Q.Missing_Item(52) && Q.Rev_Item(64)==1) ||
+						 (Q.Missing_Item(64) && Q.Rev_Item(52) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(70) && Q.Missing_Item(118)) || (Q.Missing_Item(70) && Q.Rev_Item(118)==1) ||
+						 (Q.Missing_Item(118) && Q.Rev_Item(70) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(99) && Q.Missing_Item(146)) || (Q.Missing_Item(99) && Q.Rev_Item(146)==1) ||
+						 (Q.Missing_Item(146) && Q.Rev_Item(99) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(5) && Q.Missing_Item(136)) || (Q.Missing_Item(5) && Q.Rev_Item(136)==1) ||
+						 (Q.Missing_Item(136) && Q.Rev_Item(5) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(20) && Q.Missing_Item(79)) || (Q.Missing_Item(20) && Q.Rev_Item(79)==1) ||
+						 (Q.Missing_Item(79) && Q.Rev_Item(20) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(15) && Q.Missing_Item(98)) || (Q.Missing_Item(15) && Q.Rev_Item(98)==1) ||
+						 (Q.Missing_Item(98) && Q.Rev_Item(15) ==1))
+		{MISSTRUE++;}
+		if((Q.Missing_Item(110) && Q.Missing_Item(145)) || (Q.Missing_Item(110) && Q.Rev_Item(145)==1) ||
+						 (Q.Missing_Item(145) && Q.Rev_Item(110) ==1))
+		{MISSTRUE++;}
+
+		//prorate true pair score
+		TRINTRUE = TRINTRUE * (8.0/(8.0-MISSTRUE));
+
+		//Scoring false pairs
+		float TRINFALSE =0;
+		if(!Q.Missing_Item(51) && !Q.Missing_Item(63) && (Q.Rev_Item(51)==0) && (Q.Rev_Item(63)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(40) && !Q.Missing_Item(148) && (Q.Rev_Item(40)==0) && (Q.Rev_Item(148)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(69) && !Q.Missing_Item(46) && (Q.Rev_Item(69)==0) && (Q.Rev_Item(46)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(80) && !Q.Missing_Item(140) && (Q.Rev_Item(80)==0) && (Q.Rev_Item(140)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(5) && !Q.Missing_Item(136) && (Q.Rev_Item(5)==0) && (Q.Rev_Item(136)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(20) && !Q.Missing_Item(79) && (Q.Rev_Item(20)==0) && (Q.Rev_Item(79)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(15) && !Q.Missing_Item(98) && (Q.Rev_Item(15)==0) && (Q.Rev_Item(98)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(110) && !Q.Missing_Item(145) && (Q.Rev_Item(110)==0) && (Q.Rev_Item(145)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(132) && !Q.Missing_Item(60) && (Q.Rev_Item(132)==0) && (Q.Rev_Item(60)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(86) && !Q.Missing_Item(9) && (Q.Rev_Item(86)==0) && (Q.Rev_Item(9)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(30) && !Q.Missing_Item(73) && (Q.Rev_Item(30)==0) && (Q.Rev_Item(73)==0))
+		{TRINFALSE++;}
+		if(!Q.Missing_Item(32) && !Q.Missing_Item(104) && (Q.Rev_Item(32)==0) && (Q.Rev_Item(104)==0))
+		{TRINFALSE++;}
+
+		//count missing falsepairs.  Pair is missing if a) both items are missing, or
+		//b) one item missing, other item false. If one missing and other is true
+		//then it is not considered missing b/c we know that it couldnt have been a false/false pair
+		int MISSFALSE=0;
+		if((Q.Missing_Item(51) && Q.Missing_Item(63)) || (Q.Missing_Item(51) && Q.Rev_Item(63)==0) ||
+						 (Q.Missing_Item(63) && Q.Rev_Item(51) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(40) && Q.Missing_Item(148)) || (Q.Missing_Item(40) && Q.Rev_Item(148)==0) ||
+						 (Q.Missing_Item(148) && Q.Rev_Item(40) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(69) && Q.Missing_Item(46)) || (Q.Missing_Item(69) && Q.Rev_Item(46)==0) ||
+						 (Q.Missing_Item(46) && Q.Rev_Item(69) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(80) && Q.Missing_Item(140)) || (Q.Missing_Item(80) && Q.Rev_Item(140)==0) ||
+						 (Q.Missing_Item(140) && Q.Rev_Item(80) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(5) && Q.Missing_Item(136)) || (Q.Missing_Item(5) && Q.Rev_Item(136)==0) ||
+						 (Q.Missing_Item(136) && Q.Rev_Item(5) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(20) && Q.Missing_Item(79)) || (Q.Missing_Item(20) && Q.Rev_Item(79)==0) ||
+						 (Q.Missing_Item(79) && Q.Rev_Item(20) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(15) && Q.Missing_Item(98)) || (Q.Missing_Item(15) && Q.Rev_Item(98)==0) ||
+						 (Q.Missing_Item(98) && Q.Rev_Item(15) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(110) && Q.Missing_Item(145)) || (Q.Missing_Item(110) && Q.Rev_Item(145)==0) ||
+						 (Q.Missing_Item(145) && Q.Rev_Item(110) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(132) && Q.Missing_Item(60)) || (Q.Missing_Item(132) && Q.Rev_Item(60)==0) ||
+						 (Q.Missing_Item(60) && Q.Rev_Item(132) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(86) && Q.Missing_Item(9)) || (Q.Missing_Item(86) && Q.Rev_Item(9)==0) ||
+						 (Q.Missing_Item(9) && Q.Rev_Item(86) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(30) && Q.Missing_Item(73)) || (Q.Missing_Item(30) && Q.Rev_Item(73)==0) ||
+						 (Q.Missing_Item(73) && Q.Rev_Item(30) ==0))
+		{MISSFALSE++;}
+		if((Q.Missing_Item(32) && Q.Missing_Item(104)) || (Q.Missing_Item(32) && Q.Rev_Item(104)==0) ||
+						 (Q.Missing_Item(104) && Q.Rev_Item(32) ==0))
+		{MISSFALSE++;}
+
+		//prorate false pair score for missing pairs
+		TRINFALSE = TRINFALSE * (12.0/(12.0-MISSFALSE));
+
+		//score total TRIN
+		if((MISSTRUE <=2) && (MISSFALSE <=3)) //make sure not too many missing pairs
+		{
+			 TRIN = TRINTRUE - TRINFALSE +12;   //TRINTRUE are cancelled by TRINFALSE
+			 TRIN = round(TRIN);                  //+12 to make min score of 0
+		}
+		else
+		{
+			 TRIN =  Q.Return_Missing_Code();
+		}
+
+
+////////////////////////////////////////////////////////////////////////////
+//scoring system for VRIN
+		Q.Reset_Item_Counts();
+		VRIN = 0;
+		if(!Q.Missing_Item(5) && !Q.Missing_Item(112) && (Q.Rev_Item(5)!=Q.Rev_Item(112)))
+		{VRIN++;}
+		if(!Q.Missing_Item(20) && !Q.Missing_Item(139) && (Q.Rev_Item(20)!=Q.Rev_Item(139)))
+		{VRIN++;}
+		if(!Q.Missing_Item(44) && !Q.Missing_Item(140) && (Q.Rev_Item(44)!=Q.Rev_Item(140)))
+		{VRIN++;}
+		if(!Q.Missing_Item(2) && !Q.Missing_Item(110) && (Q.Rev_Item(2)!=Q.Rev_Item(110)))
+		{VRIN++;}
+		if(!Q.Missing_Item(88) && !Q.Missing_Item(135) && (Q.Rev_Item(88)!=Q.Rev_Item(135)))
+		{VRIN++;}
+		if(!Q.Missing_Item(51) && !Q.Missing_Item(45) && (Q.Rev_Item(51)!=Q.Rev_Item(45)))
+		{VRIN++;}
+		if(!Q.Missing_Item(29) && !Q.Missing_Item(10) && (Q.Rev_Item(29)!=Q.Rev_Item(10)))
+		{VRIN++;}
+		if(!Q.Missing_Item(6) && !Q.Missing_Item(90) && (Q.Rev_Item(6)==1) && (Q.Rev_Item(90)==0))
+		{VRIN++;}
+		if(!Q.Missing_Item(76) && !Q.Missing_Item(146) && (Q.Rev_Item(76)==1) && (Q.Rev_Item(146)==0))
+		{VRIN++;}
+		if(!Q.Missing_Item(38) && !Q.Missing_Item(109) && (Q.Rev_Item(38)==0) && (Q.Rev_Item(109)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(30) && !Q.Missing_Item(91) && (Q.Rev_Item(30)==0) && (Q.Rev_Item(91)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(82) && !Q.Missing_Item(142) && (Q.Rev_Item(82)==1) && (Q.Rev_Item(142)==0))
+		{VRIN++;}
+		if(!Q.Missing_Item(33) && !Q.Missing_Item(152) && (Q.Rev_Item(33)==0) && (Q.Rev_Item(152)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(50) && !Q.Missing_Item(62) && (Q.Rev_Item(50)==1) && (Q.Rev_Item(62)==0))
+		{VRIN++;}
+		if(!Q.Missing_Item(28) && !Q.Missing_Item(136) && (Q.Rev_Item(28)==1) && (Q.Rev_Item(136)==0))
+		{VRIN++;}
+		if(!Q.Missing_Item(52) && !Q.Missing_Item(111) && (Q.Rev_Item(52)==0) && (Q.Rev_Item(111)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(65) && !Q.Missing_Item(148) && (Q.Rev_Item(65)==0) && (Q.Rev_Item(148)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(71) && !Q.Missing_Item(130) && (Q.Rev_Item(71)==0) && (Q.Rev_Item(130)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(85) && !Q.Missing_Item(144) && (Q.Rev_Item(85)==0) && (Q.Rev_Item(144)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(132) && !Q.Missing_Item(53) && (Q.Rev_Item(132)==0) && (Q.Rev_Item(53)==1))
+		{VRIN++;}
+		if(!Q.Missing_Item(15) && !Q.Missing_Item(117) && (Q.Rev_Item(15)==0) && (Q.Rev_Item(117)==1))
+		{VRIN++;}
+
+		//handle counting missing pairs so can prorate.
+		//two types of decisions.  1) for not equal item pairs, pair is missing if either
+		//item is missing.  2) for specific value pairs, pair is missing if both missing, or if single missing
+		//item is equal to target value.  (i.e., for 6, 90 pair, if 6 missing and 90 =0, then missing.  However,
+		//if 6 is missing and 90 = 1, pair is not missing b/c couldnt get a point.)
+		int	VRINMISS=0;
+		//type 1
+		if(Q.Missing_Item(5) || Q.Missing_Item(112))
+		{VRINMISS++;}
+		if(Q.Missing_Item(20) || Q.Missing_Item(139))
+		{VRINMISS++;}
+		if(Q.Missing_Item(44) || Q.Missing_Item(140))
+		{VRINMISS++;}
+		if(Q.Missing_Item(2) || Q.Missing_Item(110))
+		{VRINMISS++;}
+		if(Q.Missing_Item(88) || Q.Missing_Item(135))
+		{VRINMISS++;}
+		if(Q.Missing_Item(51) || Q.Missing_Item(45))
+		{VRINMISS++;}
+		if(Q.Missing_Item(29) || Q.Missing_Item(10))
+		{VRINMISS++;}
+
+		//type 2
+		if((Q.Missing_Item(6) && Q.Missing_Item(90)) || ((Q.Rev_Item(6)==1) && (Q.Missing_Item(90)))
+			|| ((Q.Rev_Item(90)==0) && (Q.Missing_Item(6))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(76) && Q.Missing_Item(146)) || ((Q.Rev_Item(76)==1) && (Q.Missing_Item(146)))
+			|| ((Q.Rev_Item(146)==0) && (Q.Missing_Item(76))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(38) && Q.Missing_Item(109)) || ((Q.Rev_Item(38)==0) && (Q.Missing_Item(109)))
+			|| ((Q.Rev_Item(109)==1) && (Q.Missing_Item(38))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(30) && Q.Missing_Item(91)) || ((Q.Rev_Item(30)==0) && (Q.Missing_Item(30)))
+			|| ((Q.Rev_Item(91)==1) && (Q.Missing_Item(30))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(82) && Q.Missing_Item(142)) || ((Q.Rev_Item(82)==1) && (Q.Missing_Item(142)))
+			|| ((Q.Rev_Item(142)==0) && (Q.Missing_Item(82))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(33) && Q.Missing_Item(152)) || ((Q.Rev_Item(33)==0) && (Q.Missing_Item(152)))
+			|| ((Q.Rev_Item(152)==1) && (Q.Missing_Item(33))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(50) && Q.Missing_Item(62)) || ((Q.Rev_Item(50)==1) && (Q.Missing_Item(62)))
+			|| ((Q.Rev_Item(62)==0) && (Q.Missing_Item(50))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(28) && Q.Missing_Item(136)) || ((Q.Rev_Item(28)==1) && (Q.Missing_Item(136)))
+			|| ((Q.Rev_Item(136)==0) && (Q.Missing_Item(28))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(52) && Q.Missing_Item(111)) || ((Q.Rev_Item(52)==0) && (Q.Missing_Item(111)))
+			|| ((Q.Rev_Item(111)==1) && (Q.Missing_Item(52))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(65) && Q.Missing_Item(148)) || ((Q.Rev_Item(65)==0) && (Q.Missing_Item(148)))
+			|| ((Q.Rev_Item(148)==1) && (Q.Missing_Item(65))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(71) && Q.Missing_Item(130)) || ((Q.Rev_Item(71)==0) && ( Q.Missing_Item(130)))
+			|| ((Q.Rev_Item(130)==1) && (Q.Missing_Item(71))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(85) && Q.Missing_Item(144)) || ((Q.Rev_Item(85)==0) && (Q.Missing_Item(144)))
+			|| ((Q.Rev_Item(144)==1) && (Q.Missing_Item(85))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(132) && Q.Missing_Item(53)) || ((Q.Rev_Item(132)==0) && (Q.Missing_Item(53)))
+			|| ((Q.Rev_Item(53)==1) && (Q.Missing_Item(132))))
+		{VRINMISS++;}
+		if((Q.Missing_Item(15) && Q.Missing_Item(117)) || ((Q.Rev_Item(15)==0) && (Q.Missing_Item(117)))
+			|| ((Q.Rev_Item(117)==1) && (Q.Missing_Item(15))))
+		{VRINMISS++;}
+
+
+		if(VRINMISS >5)        // more than 25% of item pairs
+		{
+			  VRIN = Q.Return_Missing_Code();
+		}
+		else			//prorate for missing item pairs
+		{
+			  VRIN = VRIN * (21.0/(21.0-VRINMISS));
+			  VRIN = round(VRIN);
+		}
+
+
+/////////////////////////////////////////////////////////////////////
+		//scoring system for Invalid determination
+		Invalid =0;
+		if((TRIN ==Q.Return_Missing_Code()) || (VRIN ==Q.Return_Missing_Code()))
+		{
+			Invalid = Q.Return_Missing_Code();
+		}
+		else
+		{
+			//obviously, dont need all these decimal places, but it shows the origin
+			//of the cut-offs
+			if(TRIN>=16.6277 || TRIN <= 7.1429)
+			{Invalid =1;}
+			if(VRIN>= 7.1862)
+			{Invalid =1;}
+			if(VRIN>= 5.6332 && (TRIN>=15.2555 || TRIN <=8.5151))
+			{Invalid =1;}
+		}
+
+////////////////////////////////////////////////////////////////////////////
+//Caculate t-scores
+
+		//wrote individual functions for each t conversion b/c MAIN function
+		//was too big and couldnt handle any more sub functions
+
+		/*T-scores are calculated using the following steps which are identical to
+		the procedure used to calculate T scores in for the 276 item MPQ.
+
+		1.	Cumulative % frequency distribution for each scale was calculated using
+			all subjects in the N=1350 sample.
+		2. The actual probability (P) value for each raw score was calulated using the following
+			formula which corrects for the fact that the scale distribution is integer
+			whereas z-scores are continuous/real.
+				  P =  (P(raw score) + P(raw score -1))/2
+			for example, the probability associated with a raw score of 5 is calculated
+			as the average of the cumulative % associated with a 5 and the cumulative %
+			associated with a 4.
+		3.	The probability calculated in step 2 was rounded to a integer value
+		4. This integer probability was converted directly to a T score
+		5. The T score was then rounded to an integer value      */
+
+
+		WellBeingT 		= ConvertWBT(WellBeing155, Q.Return_Missing_Code());
+		SocialPotencyT = ConvertSPT(SocialPotency155, Q.Return_Missing_Code());
+		AchieveT 		= ConvertACT(Achieve155, Q.Return_Missing_Code());
+		SocialCloseT 	= ConvertSCT(SocialClose155, Q.Return_Missing_Code());
+		StressReactT 	= ConvertSRT(StressReact155, Q.Return_Missing_Code());
+		AlienationT		= ConvertALT(Alienation155, Q.Return_Missing_Code());
+		AggressionT		= ConvertAGT(Aggression155, Q.Return_Missing_Code());
+		ControlT			= ConvertCLT(Control155, Q.Return_Missing_Code());
+		HarmAvoidT		= ConvertHAT(HarmAvoid155, Q.Return_Missing_Code());
+		TraditionT		= ConvertTDT(Tradition155, Q.Return_Missing_Code());
+		AbsorptionT		= ConvertABT(Absorption155, Q.Return_Missing_Code());
+
+		PEMT				= ConvertPEMT(PEM, Q.Return_Missing_Code());
+		NEMT				= ConvertNEMT(NEM, Q.Return_Missing_Code());
+		CONT				= ConvertCONT(CON, Q.Return_Missing_Code());
+		PAGT				= ConvertPAGT(PAG, Q.Return_Missing_Code());
+		PCOT				= ConvertPCOT(PCO, Q.Return_Missing_Code());
+		NAGT				= ConvertNAGT(NAG, Q.Return_Missing_Code());
+		NALT				= ConvertNALT(NAL, Q.Return_Missing_Code());
+
+		UnlikeVirtueT	= ConvertUVT(UnlikeVirtue, Q.Return_Missing_Code());
+		TRINT				= ConvertTRINT(TRIN,Q.Return_Missing_Code());
+		VRINT				= ConvertVRINT(VRIN,Q.Return_Missing_Code());
+
+
+//////////////////////////////////////////////////////////////////////////
+//Outputting scale scores to output file
+
+		//raw content
+		Q.Insert_Scale_Score(WellBeing155);
+		Q.Insert_Scale_Score(SocialPotency155);
+		Q.Insert_Scale_Score(Achieve155);
+		Q.Insert_Scale_Score(SocialClose155);
+		Q.Insert_Scale_Score(StressReact155);
+		Q.Insert_Scale_Score(Alienation155);
+		Q.Insert_Scale_Score(Aggression155);
+		Q.Insert_Scale_Score(Control155);
+		Q.Insert_Scale_Score(HarmAvoid155);
+		Q.Insert_Scale_Score(Tradition155);
+		Q.Insert_Scale_Score(Absorption155);
+
+		//raw trait
+		Q.Insert_Scale_Score(PEM);
+		Q.Insert_Scale_Score(NEM);
+		Q.Insert_Scale_Score(CON);
+		Q.Insert_Scale_Score(PAG);
+		Q.Insert_Scale_Score(PCO);
+		Q.Insert_Scale_Score(NAG);
+		Q.Insert_Scale_Score(NAL);
+
+		//raw validity
+		Q.Insert_Scale_Score(UnlikeVirtue);
+		Q.Insert_Scale_Score(TRIN);
+		Q.Insert_Scale_Score(VRIN);
+
+		//T content
+		Q.Insert_Scale_Score(WellBeingT);
+		Q.Insert_Scale_Score(SocialPotencyT);
+		Q.Insert_Scale_Score(AchieveT);
+		Q.Insert_Scale_Score(SocialCloseT);
+		Q.Insert_Scale_Score(StressReactT);
+		Q.Insert_Scale_Score(AlienationT);
+		Q.Insert_Scale_Score(AggressionT);
+		Q.Insert_Scale_Score(ControlT);
+		Q.Insert_Scale_Score(HarmAvoidT);
+		Q.Insert_Scale_Score(TraditionT);
+		Q.Insert_Scale_Score(AbsorptionT);
+
+		//T trait
+		Q.Insert_Scale_Score(PEMT);
+		Q.Insert_Scale_Score(NEMT);
+		Q.Insert_Scale_Score(CONT);
+		Q.Insert_Scale_Score(PAGT);
+		Q.Insert_Scale_Score(PCOT);
+		Q.Insert_Scale_Score(NAGT);
+		Q.Insert_Scale_Score(NALT);
+
+		//T validity
+		Q.Insert_Scale_Score(UnlikeVirtueT);
+		Q.Insert_Scale_Score(TRINT);
+		Q.Insert_Scale_Score(VRINT);
+
+		Q.Insert_Scale_Score(Invalid);
+
+///////////////////////////////////////////////////////////////////////////
+
+	Q.Output_Scale_Scores();   //output all scores for subject to data file
+	}
+}
+
+/////////////////////////////////////////////////////////////
+//additional functions
+
+void	Setup()
+{
+
+	cout	<<	"Please verify that your data are scored:\n"
+			<<	"True  = 0\n"
+			<<	"False = 1\n\n"
+			<<	"Press 'Y' to acknowledge\n";
+
+	char Continue;
+	cin	>>	Continue;
+	if ((Continue) !='Y' && (Continue != 'y'))
+	{
+		cout	<<	"Program Terminated!\n";
+		exit(0);
+	}
+
+
+	return;
+}
+
+/////////////////////////////////////////////////////////////
+int	round(float number)
+{
+	float remainder;
+	int answer;
+
+	remainder = fmod(number,floor(number));
+	if (remainder < 0.500)
+	{
+		answer = floor(number);
+	}
+	else
+	{
+		answer = ceil(number);
+	}
+
+	return(answer);
+}
+
+/////////////////////////////////////////////////////////////
+
+int ConvertWBT(int Score, int MissValue)
+{
+	int WellBeingT;
+	switch(Score)
+	{
+		case(0):WellBeingT = 22;break;
+		case(1):WellBeingT = 27;break;
+		case(2):WellBeingT = 31;break;
+		case(3):WellBeingT = 34;break;
+		case(4):WellBeingT = 36;break;
+		case(5):WellBeingT = 38;break;
+		case(6):WellBeingT = 41;break;
+		case(7):WellBeingT = 43;break;
+		case(8):WellBeingT = 46;break;
+		case(9):WellBeingT = 49;break;
+		case(10):WellBeingT = 53;break;
+		case(11):WellBeingT = 57;break;
+		case(12):WellBeingT = 64;break;
+		default:WellBeingT = MissValue;break;
+	 }
+	 return(WellBeingT);
+}
+
+/////////////////////////////////////////////////////////////
+
+int ConvertSPT(int Score, int MissValue)
+{
+	int SocialPotencyT;
+	switch(Score)
+	{
+		case(0):SocialPotencyT = 34;break;
+		case(1):SocialPotencyT = 41;break;
+		case(2):SocialPotencyT = 45;break;
+		case(3):SocialPotencyT = 47;break;
+		case(4):SocialPotencyT = 49;break;
+		case(5):SocialPotencyT = 51;break;
+		case(6):SocialPotencyT = 53;break;
+		case(7):SocialPotencyT = 56;break;
+		case(8):SocialPotencyT = 57;break;
+		case(9):SocialPotencyT = 60;break;
+		case(10):SocialPotencyT = 62;break;
+		case(11):SocialPotencyT = 66;break;
+		case(12):SocialPotencyT = 71;break;
+		default:SocialPotencyT = MissValue;break;
+	}
+	return(SocialPotencyT);
+}
+
+/////////////////////////////////////////////////////////////
+
+
+int	ConvertACT(int Score, int MissValue)
+{
+	int AchieveT;
+	switch(Score)
+	{
+		case(0):AchieveT = 27;break;
+		case(1):AchieveT = 31;break;
+		case(2):AchieveT = 35;break;
+		case(3):AchieveT = 39;break;
+		case(4):AchieveT = 42;break;
+		case(5):AchieveT = 44;break;
+		case(6):AchieveT = 47;break;
+		case(7):AchieveT = 50;break;
+		case(8):AchieveT = 53;break;
+		case(9):AchieveT = 55;break;
+		case(10):AchieveT = 58;break;
+		case(11):AchieveT = 62;break;
+		case(12):AchieveT = 69;break;
+		default:AchieveT = MissValue;break;
+	}
+	return(AchieveT);
+}
+
+
+/////////////////////////////////////////////////////////////
+
+int ConvertSCT(int Score, int MissValue)
+{
+	int SocialCloseT;
+	switch(Score)
+	{
+		case(0):SocialCloseT = 27;break;
+		case(1):SocialCloseT = 29;break;
+		case(2):SocialCloseT = 34;break;
+		case(3):SocialCloseT = 37;break;
+		case(4):SocialCloseT = 40;break;
+		case(5):SocialCloseT = 42;break;
+		case(6):SocialCloseT = 44;break;
+		case(7):SocialCloseT = 47;break;
+		case(8):SocialCloseT = 49;break;
+		case(9):SocialCloseT = 52;break;
+		case(10):SocialCloseT = 55;break;
+		case(11):SocialCloseT = 60;break;
+		case(12):SocialCloseT = 66;break;
+		default:SocialCloseT = MissValue;break;
+	}
+	return(SocialCloseT);
+}
+/////////////////////////////////////////////////////////////
+int ConvertSRT(int Score, int MissValue)
+{
+	int StressReactT;
+	switch(Score) //convert item to new scale
+	{
+		case(0):StressReactT = 31;break;
+		case(1):StressReactT = 37;break;
+		case(2):StressReactT = 41;break;
+		case(3):StressReactT = 44;break;
+		case(4):StressReactT = 47;break;
+		case(5):StressReactT = 49;break;
+		case(6):StressReactT = 51;break;
+		case(7):StressReactT = 53;break;
+		case(8):StressReactT = 56;break;
+		case(9):StressReactT = 58;break;
+		case(10):StressReactT = 61;break;
+		case(11):StressReactT = 65;break;
+		case(12):StressReactT = 71;break;
+		default:StressReactT = MissValue;break;
+	}
+	return(StressReactT);
+
+}
+/////////////////////////////////////////////////////////////
+int ConvertALT(int Score, int MissValue)
+{
+	int AlienationT;
+	switch(Score) //convert item to new scale
+	{
+		case(0):AlienationT = 43;break;
+		case(1):AlienationT = 52;break;
+		case(2):AlienationT = 56;break;
+		case(3):AlienationT = 59;break;
+		case(4):AlienationT = 62;break;
+		case(5):AlienationT = 64;break;
+		case(6):AlienationT = 66;break;
+		case(7):AlienationT = 66;break;
+		case(8):AlienationT = 68;break;
+		case(9):AlienationT = 69;break;
+		case(10):AlienationT = 73;break;
+		case(11):AlienationT = 78;break;
+		case(12):AlienationT = 78;break;
+		default:AlienationT = MissValue;break;
+	}
+	return(AlienationT);
+}
+
+/////////////////////////////////////////////////////////////
+int  ConvertAGT(int Score, int MissValue)
+{
+	int AggressionT;
+	switch(Score)
+	{
+		case(0):AggressionT = 38;break;
+		case(1):AggressionT = 46;break;
+		case(2):AggressionT = 51;break;
+		case(3):AggressionT = 54;break;
+		case(4):AggressionT = 57;break;
+		case(5):AggressionT = 60;break;
+		case(6):AggressionT = 63;break;
+		case(7):AggressionT = 66;break;
+		case(8):AggressionT = 68;break;
+		case(9):AggressionT = 71;break;
+		case(10):AggressionT = 73;break;
+		case(11):AggressionT = 78;break;
+		case(12):AggressionT = 78;break;
+		default:AggressionT = MissValue;break;
+	}
+	return(AggressionT);
+}
+/////////////////////////////////////////////////////////////
+int ConvertCLT(int Score, int MissValue)
+{
+	int ControlT;
+	switch(Score)
+	{
+		case(0):ControlT = 22;break;
+		case(1):ControlT = 27;break;
+		case(2):ControlT = 29;break;
+		case(3):ControlT = 32;break;
+		case(4):ControlT = 34;break;
+		case(5):ControlT = 38;break;
+		case(6):ControlT = 40;break;
+		case(7):ControlT = 44;break;
+		case(8):ControlT = 46;break;
+		case(9):ControlT = 50;break;
+		case(10):ControlT = 54;break;
+		case(11):ControlT = 59;break;
+		case(12):ControlT = 66;break;
+		default:ControlT = MissValue;break;
+	}
+	return(ControlT);
+}
+
+/////////////////////////////////////////////////////////////
+int ConvertHAT(int Score, int MissValue)
+{
+	int HarmAvoidT;
+	switch(Score) //convert item to new scale
+	{
+		case(0):HarmAvoidT = 22;break;
+		case(1):HarmAvoidT = 27;break;
+		case(2):HarmAvoidT = 29;break;
+		case(3):HarmAvoidT = 32;break;
+		case(4):HarmAvoidT = 36;break;
+		case(5):HarmAvoidT = 38;break;
+		case(6):HarmAvoidT = 41;break;
+		case(7):HarmAvoidT = 44;break;
+		case(8):HarmAvoidT = 46;break;
+		case(9):HarmAvoidT = 49;break;
+		case(10):HarmAvoidT = 52;break;
+		case(11):HarmAvoidT = 57;break;
+		case(12):HarmAvoidT = 63;break;
+		default:HarmAvoidT = MissValue;break;
+	}
+	return(HarmAvoidT);
+}
+/////////////////////////////////////////////////////////////
+
+int ConvertTDT(int Score, int MissValue)
+{
+	int TraditionT;
+	switch(Score)
+	{
+		case(0):TraditionT = 22;break;
+		case(1):TraditionT = 27;break;
+		case(2):TraditionT = 32;break;
+		case(3):TraditionT = 34;break;
+		case(4):TraditionT = 37;break;
+		case(5):TraditionT = 40;break;
+		case(6):TraditionT = 42;break;
+		case(7):TraditionT = 45;break;
+		case(8):TraditionT = 48;break;
+		case(9):TraditionT = 51;break;
+		case(10):TraditionT = 54;break;
+		case(11):TraditionT = 59;break;
+		case(12):TraditionT = 66;break;
+		default:TraditionT = MissValue;break;
+	}
+	return(TraditionT);
+}
+
+/////////////////////////////////////////////////////////////
+int ConvertABT(int Score, int MissValue)
+{
+	int AbsorptionT;
+	switch(Score) //convert item to new scale
+	{
+		case(0):AbsorptionT = 29;break;
+		case(1):AbsorptionT = 35;break;
+		case(2):AbsorptionT = 39;break;
+		case(3):AbsorptionT = 43;break;
+		case(4):AbsorptionT = 46;break;
+		case(5):AbsorptionT = 49;break;
+		case(6):AbsorptionT = 52;break;
+		case(7):AbsorptionT = 55;break;
+		case(8):AbsorptionT = 57;break;
+		case(9):AbsorptionT = 60;break;
+		case(10):AbsorptionT = 63;break;
+		case(11):AbsorptionT = 66;break;
+		case(12):AbsorptionT = 73;break;
+		default:AbsorptionT = MissValue;break;
+	}
+	return(AbsorptionT);
+}
+
+
+/////////////////////////////////////////////////////////////
+int ConvertPEMT(int Score, int MissValue)
+{
+	int PEMT;
+
+	if (Score == MissValue)
+	{
+		PEMT = MissValue;
+	}
+	else if (Score < 32)   //scores below this are at the floor T-score of 22
+	{
+		PEMT = 22;
+	}
+	else if (Score > 97)  //scores above this are at the ceiling T-score of 78
+	{
+		PEMT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(32):PEMT = 27 ;break;
+		case(33):PEMT = 27 ;break;
+		case(34):PEMT = 27 ;break;
+		case(35):PEMT = 27 ;break;
+		case(36):PEMT = 29 ;break;
+		case(37):PEMT = 29 ;break;
+		case(38):PEMT = 31 ;break;
+		case(39):PEMT = 31 ;break;
+		case(40):PEMT = 31 ;break;
+		case(41):PEMT = 32 ;break;
+		case(42):PEMT = 34 ;break;
+		case(43):PEMT = 34 ;break;
+		case(44):PEMT = 34 ;break;
+		case(45):PEMT = 35 ;break;
+		case(46):PEMT = 35 ;break;
+		case(47):PEMT = 36 ;break;
+		case(48):PEMT = 37 ;break;
+		case(49):PEMT = 38 ;break;
+		case(50):PEMT = 38 ;break;
+		case(51):PEMT = 39 ;break;
+		case(52):PEMT = 40 ;break;
+		case(53):PEMT = 41 ;break;
+		case(54):PEMT = 42 ;break;
+		case(55):PEMT = 42 ;break;
+		case(56):PEMT = 43 ;break;
+		case(57):PEMT = 43 ;break;
+		case(58):PEMT = 44 ;break;
+		case(59):PEMT = 44 ;break;
+		case(60):PEMT = 45 ;break;
+		case(61):PEMT = 46 ;break;
+		case(62):PEMT = 46 ;break;
+		case(63):PEMT = 47 ;break;
+		case(64):PEMT = 47 ;break;
+		case(65):PEMT = 48 ;break;
+		case(66):PEMT = 49 ;break;
+		case(67):PEMT = 50 ;break;
+		case(68):PEMT = 50 ;break;
+		case(69):PEMT = 51 ;break;
+		case(70):PEMT = 51 ;break;
+		case(71):PEMT = 52 ;break;
+		case(72):PEMT = 53 ;break;
+		case(73):PEMT = 53 ;break;
+		case(74):PEMT = 54 ;break;
+		case(75):PEMT = 54 ;break;
+		case(76):PEMT = 55 ;break;
+		case(77):PEMT = 56 ;break;
+		case(78):PEMT = 56 ;break;
+		case(79):PEMT = 57 ;break;
+		case(80):PEMT = 58 ;break;
+		case(81):PEMT = 58 ;break;
+		case(82):PEMT = 59 ;break;
+		case(83):PEMT = 60 ;break;
+		case(84):PEMT = 60 ;break;
+		case(85):PEMT = 61 ;break;
+		case(86):PEMT = 62 ;break;
+		case(87):PEMT = 63 ;break;
+		case(88):PEMT = 64 ;break;
+		case(89):PEMT = 66 ;break;
+		case(90):PEMT = 66 ;break;
+		case(91):PEMT = 66 ;break;
+		case(92):PEMT = 68 ;break;
+		case(93):PEMT = 69 ;break;
+		case(94):PEMT = 69 ;break;
+		case(95):PEMT = 71 ;break;
+		case(96):PEMT = 73 ;break;
+		case(97):PEMT = 73 ;break;
+		}
+	}
+	return(PEMT);
+}
+
+
+/////////////////////////////////////////////////////////////
+int ConvertNEMT(int Score, int MissValue)
+{
+	int NEMT;
+
+	if (Score == MissValue)
+	{
+		NEMT = MissValue;
+	}
+	else if (Score < 13)
+	{
+		NEMT = 22;
+	}
+	else if (Score > 86)
+	{
+		NEMT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(13):NEMT = 27 ;break;
+		case(14):NEMT = 29 ;break;
+		case(15):NEMT = 31 ;break;
+		case(16):NEMT = 34 ;break;
+		case(17):NEMT = 34;break;
+		case(18):NEMT = 36 ;break;
+		case(19):NEMT = 38 ;break;
+		case(20):NEMT = 39 ;break;
+		case(21):NEMT = 40 ;break;
+		case(22):NEMT = 41 ;break;
+		case(23):NEMT = 42 ;break;
+		case(24):NEMT = 43 ;break;
+		case(25):NEMT = 44 ;break;
+		case(26):NEMT = 45 ;break;
+		case(27):NEMT = 46 ;break;
+		case(28):NEMT = 47 ;break;
+		case(29):NEMT = 48 ;break;
+		case(30):NEMT = 48 ;break;
+		case(31):NEMT = 49 ;break;
+		case(32):NEMT = 50 ;break;
+		case(33):NEMT = 50 ;break;
+		case(34):NEMT = 51 ;break;
+		case(35):NEMT = 52 ;break;
+		case(36):NEMT = 52 ;break;
+		case(37):NEMT = 53 ;break;
+		case(38):NEMT = 54 ;break;
+		case(39):NEMT = 54 ;break;
+		case(40):NEMT = 55 ;break;
+		case(41):NEMT = 56 ;break;
+		case(42):NEMT = 56 ;break;
+		case(43):NEMT = 57 ;break;
+		case(44):NEMT = 58 ;break;
+		case(45):NEMT = 58 ;break;
+		case(46):NEMT = 59 ;break;
+		case(47):NEMT = 60 ;break;
+		case(48):NEMT = 60 ;break;
+		case(49):NEMT = 60 ;break;
+		case(50):NEMT = 61 ;break;
+		case(51):NEMT = 61 ;break;
+		case(52):NEMT = 62 ;break;
+		case(53):NEMT = 62 ;break;
+		case(54):NEMT = 63 ;break;
+		case(55):NEMT = 63 ;break;
+		case(56):NEMT = 63 ;break;
+		case(57):NEMT = 63 ;break;
+		case(58):NEMT = 64 ;break;
+		case(59):NEMT = 64 ;break;
+		case(60):NEMT = 65 ;break;
+		case(61):NEMT = 65 ;break;
+		case(62):NEMT = 66 ;break;
+		case(63):NEMT = 66 ;break;
+		case(64):NEMT = 66 ;break;
+		case(65):NEMT = 66 ;break;
+		case(66):NEMT = 68 ;break;
+		case(67):NEMT = 68 ;break;
+		case(68):NEMT = 68 ;break;
+		case(69):NEMT = 69 ;break;
+		case(70):NEMT = 69 ;break;
+		case(71):NEMT = 69 ;break;
+		case(72):NEMT = 71 ;break;
+		case(73):NEMT = 71 ;break;
+		case(74):NEMT = 71 ;break;
+		case(75):NEMT = 71 ;break;
+		case(76):NEMT = 71 ;break;
+		case(77):NEMT = 71 ;break;
+		case(78):NEMT = 71 ;break;
+		case(79):NEMT = 73 ;break;
+		case(80):NEMT = 73 ;break;
+		case(81):NEMT = 73 ;break;
+		case(82):NEMT = 73 ;break;
+		case(83):NEMT = 73 ;break;
+		case(84):NEMT = 73 ;break;
+		case(85):NEMT = 73 ;break;
+		case(86):NEMT = 73 ;break;
+		}
+	}
+	  return(NEMT);
+}
+/////////////////////////////////////////////////////////////
+
+int ConvertCONT(int Score, int MissValue)
+{
+	int CONT;
+	if (Score == MissValue)
+	{
+		CONT = MissValue;
+	}
+	else if (Score < 44)
+	{
+		CONT = 22;
+	}
+	else if (Score > 110)
+	{
+		CONT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(44):CONT = 27 ;break;
+		case(45):CONT = 27 ;break;
+		case(46):CONT = 27 ;break;
+		case(47):CONT = 27 ;break;
+		case(48):CONT = 27 ;break;
+		case(49):CONT = 29 ;break;
+		case(50):CONT = 29 ;break;
+		case(51):CONT = 29 ;break;
+		case(52):CONT = 29 ;break;
+		case(53):CONT = 29 ;break;
+		case(54):CONT = 31 ;break;
+		case(55):CONT = 31 ;break;
+		case(56):CONT = 31 ;break;
+		case(57):CONT = 31 ;break;
+		case(58):CONT = 32 ;break;
+		case(59):CONT = 34 ;break;
+		case(60):CONT = 34 ;break;
+		case(61):CONT = 34 ;break;
+		case(62):CONT = 35 ;break;
+		case(63):CONT = 36 ;break;
+		case(64):CONT = 37 ;break;
+		case(65):CONT = 37 ;break;
+		case(66):CONT = 38 ;break;
+		case(67):CONT = 38 ;break;
+		case(68):CONT = 39 ;break;
+		case(69):CONT = 40 ;break;
+		case(70):CONT = 40 ;break;
+		case(71):CONT = 40 ;break;
+		case(72):CONT = 41 ;break;
+		case(73):CONT = 42 ;break;
+		case(74):CONT = 42 ;break;
+		case(75):CONT = 43 ;break;
+		case(76):CONT = 43 ;break;
+		case(77):CONT = 44 ;break;
+		case(78):CONT = 44 ;break;
+		case(79):CONT = 45 ;break;
+		case(80):CONT = 46 ;break;
+		case(81):CONT = 46 ;break;
+		case(82):CONT = 47 ;break;
+		case(83):CONT = 47 ;break;
+		case(84):CONT = 48 ;break;
+		case(85):CONT = 48 ;break;
+		case(86):CONT = 49 ;break;
+		case(87):CONT = 50 ;break;
+		case(88):CONT = 51 ;break;
+		case(89):CONT = 51 ;break;
+		case(90):CONT = 52 ;break;
+		case(91):CONT = 53 ;break;
+		case(92):CONT = 53 ;break;
+		case(93):CONT = 54 ;break;
+		case(94):CONT = 55 ;break;
+		case(95):CONT = 56 ;break;
+		case(96):CONT = 56 ;break;
+		case(97):CONT = 57 ;break;
+		case(98):CONT = 58 ;break;
+		case(99):CONT = 59 ;break;
+		case(100):CONT = 60 ;break;
+		case(101):CONT = 61 ;break;
+		case(102):CONT = 62 ;break;
+		case(103):CONT = 63 ;break;
+		case(104):CONT = 64 ;break;
+		case(105):CONT = 66 ;break;
+		case(106):CONT = 68 ;break;
+		case(107):CONT = 69 ;break;
+		case(108):CONT = 71 ;break;
+		case(109):CONT = 73 ;break;
+		case(110):CONT = 73 ;break;
+		}
+	}
+	return(CONT);
+}
+
+/////////////////////////////////////////////////////////////
+int ConvertPAGT(int Score, int MissValue)
+{
+	int PAGT;
+
+	if (Score == MissValue)
+	{
+		PAGT = MissValue;
+	}
+	else if (Score < 23)
+	{
+		PAGT = 22;
+	}
+	else if (Score > 86)
+	{
+		PAGT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(23):PAGT = 27 ;break;
+		case(24):PAGT = 27 ;break;
+		case(25):PAGT = 27 ;break;
+		case(26):PAGT = 27 ;break;
+		case(27):PAGT = 27 ;break;
+		case(28):PAGT = 29 ;break;
+		case(29):PAGT = 29 ;break;
+		case(30):PAGT = 31 ;break;
+		case(31):PAGT = 31 ;break;
+		case(32):PAGT = 32 ;break;
+		case(33):PAGT = 34 ;break;
+		case(34):PAGT = 34 ;break;
+		case(35):PAGT = 34 ;break;
+		case(36):PAGT = 35 ;break;
+		case(37):PAGT = 37 ;break;
+		case(38):PAGT = 37 ;break;
+		case(39):PAGT = 38 ;break;
+		case(40):PAGT = 39 ;break;
+		case(41):PAGT = 40 ;break;
+		case(42):PAGT = 40 ;break;
+		case(43):PAGT = 41 ;break;
+		case(44):PAGT = 42 ;break;
+		case(45):PAGT = 43 ;break;
+		case(46):PAGT = 43 ;break;
+		case(47):PAGT = 44 ;break;
+		case(48):PAGT = 44 ;break;
+		case(49):PAGT = 45 ;break;
+		case(50):PAGT = 46 ;break;
+		case(51):PAGT = 46 ;break;
+		case(52):PAGT = 47 ;break;
+		case(53):PAGT = 47 ;break;
+		case(54):PAGT = 48 ;break;
+		case(55):PAGT = 48 ;break;
+		case(56):PAGT = 49 ;break;
+		case(57):PAGT = 50 ;break;
+		case(58):PAGT = 50 ;break;
+		case(59):PAGT = 51 ;break;
+		case(60):PAGT = 52 ;break;
+		case(61):PAGT = 53 ;break;
+		case(62):PAGT = 53 ;break;
+		case(63):PAGT = 54 ;break;
+		case(64):PAGT = 55 ;break;
+		case(65):PAGT = 55 ;break;
+		case(66):PAGT = 56 ;break;
+		case(67):PAGT = 56 ;break;
+		case(68):PAGT = 57 ;break;
+		case(69):PAGT = 58 ;break;
+		case(70):PAGT = 58 ;break;
+		case(71):PAGT = 59 ;break;
+		case(72):PAGT = 60 ;break;
+		case(73):PAGT = 60 ;break;
+		case(74):PAGT = 61 ;break;
+		case(75):PAGT = 62 ;break;
+		case(76):PAGT = 62 ;break;
+		case(77):PAGT = 63 ;break;
+		case(78):PAGT = 64 ;break;
+		case(79):PAGT = 66 ;break;
+		case(80):PAGT = 66 ;break;
+		case(81):PAGT = 68 ;break;
+		case(82):PAGT = 69 ;break;
+		case(83):PAGT = 71 ;break;
+		case(84):PAGT = 71 ;break;
+		case(85):PAGT = 73 ;break;
+		case(86):PAGT = 73 ;break;
+		}
+	}
+	return(PAGT);
+}
+
+
+/////////////////////////////////////////////////////////////
+int ConvertPCOT(int Score, int MissValue)
+{
+	int PCOT;
+
+	if (Score == MissValue)
+	{
+		PCOT = MissValue;
+	}
+	else if (Score < 24)
+	{
+		PCOT = 22;
+	}
+	else if (Score > 90)
+	{
+		PCOT =78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(24):PCOT = 27 ;break;
+		case(25):PCOT = 27 ;break;
+		case(26):PCOT = 27 ;break;
+		case(27):PCOT = 27 ;break;
+		case(28):PCOT = 27 ;break;
+		case(29):PCOT = 27 ;break;
+		case(30):PCOT = 29 ;break;
+		case(31):PCOT = 29 ;break;
+		case(32):PCOT = 29 ;break;
+		case(33):PCOT = 29 ;break;
+		case(34):PCOT = 31 ;break;
+		case(35):PCOT = 32 ;break;
+		case(36):PCOT = 32 ;break;
+		case(37):PCOT = 34 ;break;
+		case(38):PCOT = 35 ;break;
+		case(39):PCOT = 36 ;break;
+		case(40):PCOT = 36 ;break;
+		case(41):PCOT = 37 ;break;
+		case(42):PCOT = 37 ;break;
+		case(43):PCOT = 38 ;break;
+		case(44):PCOT = 38 ;break;
+		case(45):PCOT = 39 ;break;
+		case(46):PCOT = 40 ;break;
+		case(47):PCOT = 40 ;break;
+		case(48):PCOT = 41 ;break;
+		case(49):PCOT = 42 ;break;
+		case(50):PCOT = 42 ;break;
+		case(51):PCOT = 43 ;break;
+		case(52):PCOT = 43 ;break;
+		case(53):PCOT = 44 ;break;
+		case(54):PCOT = 44 ;break;
+		case(55):PCOT = 45 ;break;
+		case(56):PCOT = 45 ;break;
+		case(57):PCOT = 46 ;break;
+		case(58):PCOT = 47 ;break;
+		case(59):PCOT = 47 ;break;
+		case(60):PCOT = 48 ;break;
+		case(61):PCOT = 48 ;break;
+		case(62):PCOT = 49 ;break;
+		case(63):PCOT = 49 ;break;
+		case(64):PCOT = 50 ;break;
+		case(65):PCOT = 51 ;break;
+		case(66):PCOT = 52 ;break;
+		case(67):PCOT = 52 ;break;
+		case(68):PCOT = 53 ;break;
+		case(69):PCOT = 54 ;break;
+		case(70):PCOT = 54 ;break;
+		case(71):PCOT = 55 ;break;
+		case(72):PCOT = 56 ;break;
+		case(73):PCOT = 56 ;break;
+		case(74):PCOT = 57 ;break;
+		case(75):PCOT = 57 ;break;
+		case(76):PCOT = 58 ;break;
+		case(77):PCOT = 60 ;break;
+		case(78):PCOT = 60 ;break;
+		case(79):PCOT = 61 ;break;
+		case(80):PCOT = 62 ;break;
+		case(81):PCOT = 63 ;break;
+		case(82):PCOT = 64 ;break;
+		case(83):PCOT = 65 ;break;
+		case(84):PCOT = 66 ;break;
+		case(85):PCOT = 68 ;break;
+		case(86):PCOT = 68 ;break;
+		case(87):PCOT = 69 ;break;
+		case(88):PCOT = 71 ;break;
+		case(89):PCOT = 73 ;break;
+		case(90):PCOT = 73 ;break;
+		}
+	}
+	return(PCOT);
+}
+
+/////////////////////////////////////////////////////////////
+
+int ConvertNAGT(int Score, int MissValue)
+{
+	int NAGT;
+	if (Score == MissValue)
+	{
+		NAGT = MissValue;
+	}
+	else if (Score < 25)
+	{
+		NAGT = 22;
+	}
+	else if (Score > 92)
+	{
+		NAGT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(25):NAGT = 27 ;break;
+		case(26):NAGT = 31 ;break;
+		case(27):NAGT = 32 ;break;
+		case(28):NAGT = 34 ;break;
+		case(29):NAGT = 36 ;break;
+		case(30):NAGT = 37 ;break;
+		case(31):NAGT = 39 ;break;
+		case(32):NAGT = 40 ;break;
+		case(33):NAGT = 41 ;break;
+		case(34):NAGT = 42 ;break;
+		case(35):NAGT = 43 ;break;
+		case(36):NAGT = 43 ;break;
+		case(37):NAGT = 44 ;break;
+		case(38):NAGT = 45 ;break;
+		case(39):NAGT = 46 ;break;
+		case(40):NAGT = 47 ;break;
+		case(41):NAGT = 47 ;break;
+		case(42):NAGT = 48 ;break;
+		case(43):NAGT = 49 ;break;
+		case(44):NAGT = 50 ;break;
+		case(45):NAGT = 51 ;break;
+		case(46):NAGT = 51 ;break;
+		case(47):NAGT = 52 ;break;
+		case(48):NAGT = 53 ;break;
+		case(49):NAGT = 53 ;break;
+		case(50):NAGT = 54 ;break;
+		case(51):NAGT = 54 ;break;
+		case(52):NAGT = 55 ;break;
+		case(53):NAGT = 55 ;break;
+		case(54):NAGT = 56 ;break;
+		case(55):NAGT = 56 ;break;
+		case(56):NAGT = 57 ;break;
+		case(57):NAGT = 57 ;break;
+		case(58):NAGT = 58 ;break;
+		case(59):NAGT = 58 ;break;
+		case(60):NAGT = 59 ;break;
+		case(61):NAGT = 60 ;break;
+		case(62):NAGT = 60 ;break;
+		case(63):NAGT = 60 ;break;
+		case(64):NAGT = 61 ;break;
+		case(65):NAGT = 61 ;break;
+		case(66):NAGT = 62 ;break;
+		case(67):NAGT = 62 ;break;
+		case(68):NAGT = 63 ;break;
+		case(69):NAGT = 63 ;break;
+		case(70):NAGT = 64 ;break;
+		case(71):NAGT = 65 ;break;
+		case(72):NAGT = 65 ;break;
+		case(73):NAGT = 66 ;break;
+		case(74):NAGT = 66 ;break;
+		case(75):NAGT = 66 ;break;
+		case(76):NAGT = 66 ;break;
+		case(77):NAGT = 68 ;break;
+		case(78):NAGT = 68 ;break;
+		case(79):NAGT = 68 ;break;
+		case(80):NAGT = 69 ;break;
+		case(81):NAGT = 69 ;break;
+		case(82):NAGT = 69 ;break;
+		case(83):NAGT = 71 ;break;
+		case(84):NAGT = 71 ;break;
+		case(85):NAGT = 71 ;break;
+		case(86):NAGT = 71 ;break;
+		case(87):NAGT = 71 ;break;
+		case(88):NAGT = 73 ;break;
+		case(89):NAGT = 73 ;break;
+		case(90):NAGT = 73 ;break;
+		case(91):NAGT = 73 ;break;
+		case(92):NAGT = 73 ;break;
+		}
+	}
+	return(NAGT);
+}
+
+/////////////////////////////////////////////////////////////
+
+int ConvertNALT(int Score, int MissValue)
+{
+	int NALT;
+
+	if (Score == MissValue)
+	{
+		NALT = MissValue;
+	}
+	else if (Score < 18)
+	{
+		NALT = 22;
+	}
+	else if (Score > 89)
+	{
+		NALT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(18):NALT = 27 ;break;
+		case(19):NALT = 27 ;break;
+		case(20):NALT = 31 ;break;
+		case(21):NALT = 34 ;break;
+		case(22):NALT = 37 ;break;
+		case(23):NALT = 39 ;break;
+		case(24):NALT = 41 ;break;
+		case(25):NALT = 43 ;break;
+		case(26):NALT = 44 ;break;
+		case(27):NALT = 45 ;break;
+		case(28):NALT = 47 ;break;
+		case(29):NALT = 48 ;break;
+		case(30):NALT = 49 ;break;
+		case(31):NALT = 50 ;break;
+		case(32):NALT = 51 ;break;
+		case(33):NALT = 52 ;break;
+		case(34):NALT = 53 ;break;
+		case(35):NALT = 53 ;break;
+		case(36):NALT = 54 ;break;
+		case(37):NALT = 54 ;break;
+		case(38):NALT = 55 ;break;
+		case(39):NALT = 56 ;break;
+		case(40):NALT = 56 ;break;
+		case(41):NALT = 57 ;break;
+		case(42):NALT = 57 ;break;
+		case(43):NALT = 58 ;break;
+		case(44):NALT = 58 ;break;
+		case(45):NALT = 59 ;break;
+		case(46):NALT = 60 ;break;
+		case(47):NALT = 60 ;break;
+		case(48):NALT = 60 ;break;
+		case(49):NALT = 61 ;break;
+		case(50):NALT = 61 ;break;
+		case(51):NALT = 61 ;break;
+		case(52):NALT = 62 ;break;
+		case(53):NALT = 62 ;break;
+		case(54):NALT = 63 ;break;
+		case(55):NALT = 63 ;break;
+		case(56):NALT = 64 ;break;
+		case(57):NALT = 64 ;break;
+		case(58):NALT = 65 ;break;
+		case(59):NALT = 65 ;break;
+		case(60):NALT = 65 ;break;
+		case(61):NALT = 65 ;break;
+		case(62):NALT = 66 ;break;
+		case(63):NALT = 66 ;break;
+		case(64):NALT = 66 ;break;
+		case(65):NALT = 66 ;break;
+		case(66):NALT = 66 ;break;
+		case(67):NALT = 66 ;break;
+		case(68):NALT = 66 ;break;
+		case(69):NALT = 68 ;break;
+		case(70):NALT = 68 ;break;
+		case(71):NALT = 68 ;break;
+		case(72):NALT = 68 ;break;
+		case(73):NALT = 68 ;break;
+		case(74):NALT = 68 ;break;
+		case(75):NALT = 69 ;break;
+		case(76):NALT = 69 ;break;
+		case(77):NALT = 69 ;break;
+		case(78):NALT = 69 ;break;
+		case(79):NALT = 69 ;break;
+		case(80):NALT = 69 ;break;
+		case(81):NALT = 71 ;break;
+		case(82):NALT = 71 ;break;
+		case(83):NALT = 71 ;break;
+		case(84):NALT = 71 ;break;
+		case(85):NALT = 71 ;break;
+		case(86):NALT = 73 ;break;
+		case(87):NALT = 73 ;break;
+		case(88):NALT = 73 ;break;
+		case(89):NALT = 73 ;break;
+		}
+	}
+	return(NALT);
+}
+
+/////////////////////////////////////////////////////////////
+int ConvertUVT(int Score, int MissValue)
+{
+	int UnlikeVirtueT;
+	if (Score == MissValue)
+	{
+		UnlikeVirtueT = MissValue;
+	}
+	else if (Score > 9)
+	{
+		UnlikeVirtueT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(0):UnlikeVirtueT = 34;break;
+		case(1):UnlikeVirtueT = 41;break;
+		case(2):UnlikeVirtueT = 46;break;
+		case(3):UnlikeVirtueT = 50;break;
+		case(4):UnlikeVirtueT = 54;break;
+		case(5):UnlikeVirtueT = 57;break;
+		case(6):UnlikeVirtueT = 60;break;
+		case(7):UnlikeVirtueT = 63;break;
+		case(8):UnlikeVirtueT = 66;break;
+		case(9):UnlikeVirtueT = 71;break;
+		}
+	}
+	return(UnlikeVirtueT);
+}
+
+
+/////////////////////////////////////////////////////////////
+int ConvertVRINT(int Score, int MissValue)
+{
+	int VRINT;
+	if (Score == MissValue)
+	{
+		VRINT = MissValue;
+	}
+	else if (Score > 6)
+	{
+		VRINT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(0):VRINT = 31;break;
+		case(1):VRINT = 40;break;
+		case(2):VRINT = 47;break;
+		case(3):VRINT = 53;break;
+		case(4):VRINT = 59;break;
+		case(5):VRINT = 65;break;
+		case(6):VRINT = 71;break;
+		}
+	}
+	return(VRINT);
+}
+
+
+/////////////////////////////////////////////////////////////
+int ConvertTRINT(int Score, int MissValue)
+{
+	int TRINT;
+	if (Score == MissValue)
+	{
+		TRINT = MissValue;
+	}
+	else if (Score < 8)
+	{
+		TRINT = 22;
+	}
+	else if (Score > 16)
+	{
+		TRINT = 78;
+	}
+	else
+	{
+		switch(Score) //convert item to new scale
+		{
+		case(8):TRINT = 27;break;
+		case(9):TRINT = 31;break;
+		case(10):TRINT = 38;break;
+		case(11):TRINT = 44;break;
+		case(12):TRINT = 51;break;
+		case(13):TRINT = 58;break;
+		case(14):TRINT = 65;break;
+		case(15):TRINT = 71;break;
+		case(16):TRINT = 73;break;
+		}
+	}
+	return(TRINT);
+}
+
