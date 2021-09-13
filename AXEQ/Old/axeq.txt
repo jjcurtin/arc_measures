@@ -1,0 +1,317 @@
+##I
+Rate each of the following statements on a scale of 1 ("not at 
+all typical of me") to 5 ("very typical of me").  Choose the number that best suits the way you feel about each statement.  Please provide an answer for each question.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ1
+If I do not have enough time to do everything, I do not worry about it
+0	1	2	3	4	5	
+Not at all typical of me
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ2
+My worries overwhelm me.
+0	1	2	3	4	5	
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ3
+I do not tend to worry about things.
+0	1	2	3	4	5	
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ4
+Many situations make me worry.
+0	1	2	3	4	5	
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ5
+I know I should not worry about things, but I just cannot help it.
+0	1	2	3	4	5	
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ6
+When I am under pressure I worry a lot.
+0	1	2	3	4	5	
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI7
+Deadly
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI8
+Dizzy
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI9
+Drowsy
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI10
+Egotistical
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI11
+Erotic
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI12
+Hazardous
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI13
+Horny
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI14
+Ill
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI15
+Light-headed
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI16
+Lustful
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI17
+Nauseous
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI18
+Outgoing
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI19
+Sick
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI20
+Sleepy
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI21
+Sociable
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI22
+Social
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI23
+Tired
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI24
+Woozy
+0	1	2	3	4	5	6
+Never
+Very Rarely
+Rarely
+Occasionally 
+Frequently
+Very Frequently
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##F

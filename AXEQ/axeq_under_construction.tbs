@@ -1,0 +1,367 @@
+INCOMPLETE!!!
+
+
+
+
+##I
+Rate each of the following statements on a scale of 1 ("not at 
+all typical of me") to 5 ("very typical of me").  Choose the number that best suits the way you feel about each statement.  Please provide an answer for each question.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_1
+If I do not have enough time to do everything, I do not worry about it
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_2
+My worries overwhelm me.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_3
+I do not tend to worry about things.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_4
+Many situations make me worry.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_5
+I know I should not worry about things, but I just cannot help it.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_6
+When I am under pressure I worry a lot.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_7
+I am always worrying about something
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+Always
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_8
+I find it easy to dismiss worrisome thoughts.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_9
+As soon as I finish one task, I start to worry about everything else I have to do.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_10
+I never worry about anything.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_11
+When there is nothing more I can do about a concern, I do not worry about it any more.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_12
+I have been a worrier all my life.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_13
+I notice that I have been worrying about things.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_14
+Once I start worrying, I cannot stop.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_15
+I worry all the time.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_16
+I worry about projects until they are done.
+0	1	2	3	4	5	
+Not at all typical of me
+Very typical of me
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_17
+Injections of minor surgery
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_18
+Eating or drinking with other people
+
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_19
+Hospitals
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_20
+Traveling alone on public transportation (e.g. bus or train)
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_21
+Walking alone in busy streets
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_22
+Being watched or stared at
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_23
+Going in to crowded shops
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_24
+Talking to people in authority
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_25
+Sight of blood
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_26
+Being criticized
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_27
+Going alone far from home
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_28
+Thought of injury or illness
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_29
+Speaking or acting to an audience
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_30
+Large open spaces
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AXEQ_31
+Going to the dentist
+0	1	2	3	4	5	6	7	8
+Would not avoid it
+
+Slightly avoid it
+
+Definitely avoid it
+
+Markedly avoid it
+
+Always avoid it
+##EQ
+------------------------------------------------------------------------------------------------
+##F

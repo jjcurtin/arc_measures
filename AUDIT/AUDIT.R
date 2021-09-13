@@ -1,0 +1,2 @@
+#Items are scored (by lab convention) as 1-5 but Audit expects 0-4 so scale is corrected by subtracting 10
+dS$AUDIT_TOT = varScore(dI, Forward= c('AUDIT_1', 'AUDIT_2', 'AUDIT_3', 'AUDIT_4', 'AUDIT_5', 'AUDIT_6', 'AUDIT_7', 'AUDIT_8', 'AUDIT_9', 'AUDIT_10'), Range= c(1,5))-10

@@ -1,0 +1,260 @@
+##I
+Below is a series of questions regarding the use of alcohol.  Read each question and the different possible answers before making your choice of an answer.  Choose the ONE answer that best applies to you.  Please answer all of the questions as carefully as you can.
+Note:  The word "drinking" in a question means "drinking of alcoholic beverages."
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_1
+Do you get belligerent or mean when you drink?
+0	1	2	
+No
+Yes, sometimes
+Yes, usually
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_2
+Have you had blackouts ("loss of memory" without passing out) as a result of drinking?
+0	1	2	3	
+No
+Sometimes
+Often
+Almost every time I drink
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_3
+How much did you drink the last time you drank?
+0 	1	2	
+Enough to get high or less
+Enough to get drunk
+Enough to pass out
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_4
+Have you passed out as a result of drinking? 
+0	1	2	
+No
+About once a year
+Twice a year or more
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_5
+When you drink, do you stumble about, stagger and weave? 
+0	1	2	
+No
+Sometimes
+Often
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_6
+Do you gulp drinks (drink quickly)? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_7
+As a result of being drunk, has your thinking been fuzzy or unclear? 
+0	1	2	3	
+No
+Yes, but only for a few hours
+Yes, for one or two days
+Yes, for many days
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_8
+Have you had a convulsion (fit) following a period of drinking? 
+0	1	2	
+No
+Once
+Several Times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_9
+Do you panic because you fear you may not have a drink when you need it? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_10
+Do you sneak drinks or hide bottles?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_11
+Do you lose control over what you do when you are drinking? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_12
+As a result of drinking, have you seen things that were not there? 
+0	1	2	
+No
+Yes, once
+Yes, several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+AEI13
+Have you had "shakes" when sobering up (hands tremble, shake inside, etc.) as a result of drinking
+0	1	2	
+No
+Yes, sometimes
+Yes, almost every time I drink
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_14
+Do you usually have a bottle by your bedside?
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_15
+Do you drink throughout the day? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_16
+With respect to blackouts (loss of memory): 
+0	1	2	3	
+Have never had a blackout
+Have had blackouts that last less than an hour
+Have had blackouts that last for several hours
+Have had blackouts that last for a day or more
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_17
+As a result of drinking have you heard "things" that were not there?
+0	1	2
+No
+Yes, once
+Yes, several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_18
+Do you often have hangovers on Sunday or Monday mornings?
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_19
+Do you almost constantly think about drinking and alcohol? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_20
+Do you tend to be physically harmful to other people when drinking? 
+0	1	
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_21
+Have you had weird and frightening sensations when drinking? 
+0	1	2	
+No
+Yes, perhaps once or twice
+Yes, often
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_22
+As a result of drinking have you "felt things" crawling on you that were not there (bugs, spiders, etc.)? 
+0	1	2	
+No
+Once
+Several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_23
+Do you get physically sick (vomit, stomach cramps, etc.) as a result of drinking? 
+0	1	2	
+No
+Sometimes
+Almost every time I drink
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_24
+Do you carry a bottle with you or keep one close at hand? 
+0	1	2	
+No
+Some of the time
+Most of the time
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_25
+Have you ever attempted suicide when drinking? 
+0	1	2
+Never
+Yes, once
+Several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_26
+As a result of drinking, have you ever had delirium tremens or DT's (seen, felt, or heard things not really there)?
+0	1	2
+No
+Yes, once
+Several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_27
+As a result of drinking have you felt your heart beating rapidly?
+0	1	2
+No
+Yes, once
+Yes, several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_28
+As a result of drinking have you felt overly hot and sweaty (feverish)? 
+0	1	2
+No
+Yes, once
+Yes, several times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+ADS_29
+Do you drink during your work day?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##F
