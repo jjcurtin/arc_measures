@@ -1,0 +1,130 @@
+##I
+Please respond to the following set of questions. Choose only one answer.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_1
+With which hand do you Draw?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_2
+With which hand do you Write?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_3
+With which hand do you Use a bottle opener?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_4
+With which hand do you Throw a snowball to hit a tree?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_5
+With which hand do you Use a hammer?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_6
+With which hand do you Use a toothbrush?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_7
+With which hand do you Use a screwdriver?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_8
+With which hand do you Use an eraser on paper?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_9
+With which hand do you Use a tennis racquet?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_10
+With which hand do you Use scissors?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_11
+With which hand do you Hold a match when striking it?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_12
+With which hand do you Stir a can of paint?
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_13
+On which shoulder do you rest a bat before swinging?  
+2	0	1	
+Left	
+Right
+Either
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+HDQ_14
+Is anyone in your family left-handed?
+1	0	
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##F
