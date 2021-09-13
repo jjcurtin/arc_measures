@@ -1,0 +1,2 @@
+PANAS_POS = varScore(d, Forward= c('PANAS1', 'PANAS3', 'PANAS5', 'PANAS9', 'PANAS10', 'PANAS12', 'PANAS14', 'PANAS16', 'PANAS17', 'PANAS19'), Range = c(1,5) )
+PANAS_NEG = varScore(d, Forward= c('PANAS2', 'PANAS4', 'PANAS6', 'PANAS7', 'PANAS8', 'PANAS11', 'PANAS13', 'PANAS15', 'PANAS18', 'PANAS20'), Range = c(1,5) )
