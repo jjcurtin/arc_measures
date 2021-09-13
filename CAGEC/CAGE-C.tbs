@@ -1,0 +1,64 @@
+##I
+Please answer the following questions.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+CAGC_1
+Have you ever felt you should cut down on your drinking?
+0	1
+Yes 
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGC_2
+Have you become annoyed at criticism of your drinking?
+0	1
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGC_3
+How often, in the past 12 months, would you estimate that you have driven a motor vehicle under the influence of alcohol?
+0	1	2	3	4
+Never
+1-2 times
+3-5 times
+6-10 times
+10+ times
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGC_4
+How frequently do you choose nonalcoholic beverages at social events when both are available?
+0	1	2	3	4
+Always
+Frequently
+Sometimes
+Rarely
+Never
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGC_5
+When did you start drinking alcoholic beverages on a regular basis?
+0	1	2	3	4	5	6	7
+Elementary school
+Junior High School
+High School
+University freshmen
+University sophmore
+University junior
+University senior
+Graduate
+##EQ
+------------------------------------------------------------------------------------------------
+##F
+
+
+
+
+
+
+

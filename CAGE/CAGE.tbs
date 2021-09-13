@@ -1,0 +1,44 @@
+##I
+Please answer yes or no to the following questions.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+CAGE_1
+Have you ever felt you should cut down on your drinking?
+0	1
+Yes 
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGE_2
+Have people annoyed you by criticizing your drinking?
+0	1
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGE_3
+Have you ever felt bad or guilty about your drinking?
+0	1
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+CAGE_4
+Have you ever had a drink first thing in the morning to steady your nerves or to get rid of a hangover (eye opener)?
+0	1
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##F
+
+
+
+
+
+
+
