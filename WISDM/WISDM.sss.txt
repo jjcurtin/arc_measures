@@ -1,0 +1,96 @@
+COPYCMD	SubID	1	0
+--------------------------------------------------------------------------
+COPYCMD	co1	1	2
+--------------------------------------------------------------------------
+SUMCMD	AffAtt
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	20	36	43	48	67
+----------------------------------------------------------------------------------------------
+SUMCMD	Auto
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	5	19	26	41	55
+----------------------------------------------------------------------------------------------
+SUMCMD	LossCon
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	6	28	34	62
+----------------------------------------------------------------------------------------------
+SUMCMD	Melio
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	10	21	35	38	46	49	68
+----------------------------------------------------------------------------------------------
+SUMCMD	CogEnh
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	13	15	24	39	57
+----------------------------------------------------------------------------------------------
+SUMCMD	Crave
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	11	29	37	50
+----------------------------------------------------------------------------------------------
+SUMCMD	CueEx
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	4	17	23	40	42	51	59
+----------------------------------------------------------------------------------------------
+SUMCMD	NegRe
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	7	18	25	32	58	68
+----------------------------------------------------------------------------------------------
+SUMCMD	PosRe
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	3	8	45	60	64
+----------------------------------------------------------------------------------------------
+SUMCMD	SocEnv
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	22	30	44	52
+----------------------------------------------------------------------------------------------
+SUMCMD	Sensor
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	1	12	27	33	53	66
+----------------------------------------------------------------------------------------------
+SUMCMD	Toler
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	9	14	47	54	63
+----------------------------------------------------------------------------------------------
+SUMCMD	Weight
+MEASUREOFFSET	97
+MISSVALUECODE	-999
+PRORATEINFO	YES	25
+REVERSESCORE	NO
+SUM	2	16	31	56	61
+----------------------------------------------------------------------------------------------
+END

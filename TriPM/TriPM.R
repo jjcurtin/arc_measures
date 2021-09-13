@@ -1,0 +1,5 @@
+# Added dS and dI to match new scoring conventions- Megan F 2018_March
+
+dS$TriPM_BOLD = varScore(dI, Forward= c('TriPM1', 'TriPM7', 'TriPM13', 'TriPM19', 'TriPM22', 'TriPM28', 'TriPM32', 'TriPM38', 'TriPM54'), Reverse = c('TriPM4', 'TriPM10', 'TriPM16', 'TriPM25', 'TriPM35', 'TriPM41', 'TriPM44', 'TriPM47', 'TriPM50', 'TriPM57') )
+dS$TriPM_MEAN = varScore(dI, Forward= c('TriPM6', 'TriPM8', 'TriPM14', 'TriPM17', 'TriPM20', 'TriPM23', 'TriPM26', 'TriPM29', 'TriPM36', 'TriPM40', 'TriPM42', 'TriPM45', 'TriPM48', 'TriPM55'), Reverse = c('TriPM2', 'TriPM11', 'TriPM33', 'TriPM39', 'TriPM52', 'TriPM6') )
+dS$TriPM_DISI = varScore(dI, Forward= c('TriPM3', 'TriPM5', 'TriPM9', 'TriPM12', 'TriPM15', 'TriPM18', 'TriPM24', 'TriPM27', 'TriPM31', 'TriPM34', 'TriPM37', 'TriPM43', 'TriPM46', 'TriPM49', 'TriPM51', 'TriPM53', 'TriPM56', 'TriPM58'), Reverse = c('TriPM21', 'TriPM30')  )

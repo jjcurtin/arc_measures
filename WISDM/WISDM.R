@@ -1,0 +1,16 @@
+# Added dS and dI to match new scoring conventions- Megan F 2018_March
+
+dS$WISDM_AA = (varScore(dI, Forward= c('WISDM_20', 'WISDM_36', 'WISDM_43', 'WISDM_48', 'WISDM_67'), Range = c(1,7) )/5)
+dS$WISDM_AUTO = (varScore(dI, Forward= c('WISDM_5', 'WISDM_19', 'WISDM_26', 'WISDM_41', 'WISDM_55'), Range = c(1,7) )/5)
+dS$WISDM_LOSSC = (varScore(dI, Forward= c('WISDM_6', 'WISDM_28', 'WISDM_34', 'WISDM_62'), Range = c(1,7) )/5)
+dS$WISDM_BCM = (varScore(dI, Forward= c('WISDM_10', 'WISDM_21', 'WISDM_35', 'WISDM_38', 'WISDM_46','WISDM_49', 'WISDM_68'), Range = c(1,7) )/7)
+dS$WISDM_CE = (varScore(dI, Forward= c('WISDM_13', 'WISDM_15', 'WISDM_24', 'WISDM_39', 'WISDM_57'), Range = c(1,7) )/5)
+dS$WISDM_CRAV = (varScore(dI, Forward= c('WISDM_11', 'WISDM_29', 'WISDM_37', 'WISDM_50'), Range = c(1,7) )/4)
+dS$WISDM_CEAP = (varScore(dI, Forward= c('WISDM_4', 'WISDM_17', 'WISDM_23', 'WISDM_40', 'WISDM_42','WISDM_51', 'WISDM_59'), Range = c(1,7) )/7)
+dS$WISDM_NR = (varScore(dI, Forward= c('WISDM_7', 'WISDM_18', 'WISDM_25', 'WISDM_32', 'WISDM_58', 'WISDM_65'), Range = c(1,7) )/6)
+dS$WISDM_PR = (varScore(dI, Forward= c('WISDM_3', 'WISDM_8', 'WISDM_45', 'WISDM_60', 'WISDM_64'), Range = c(1,7) )/5)
+dS$WISDM_SEG = (varScore(dI, Forward= c('WISDM_22', 'WISDM_30', 'WISDM_44', 'WISDM_52'), Range = c(1,7) )/4)
+dS$WISDM_TSP = (varScore(dI, Forward= c('WISDM_1', 'WISDM_12', 'WISDM_27', 'WISDM_33', 'WISDM_53', 'WISDM_66'), Range = c(1,7) )/6)
+dS$WISDM_TOL = (varScore(dI, Forward= c('WISDM_9', 'WISDM_14', 'WISDM_47', 'WISDM_54', 'WISDM_63'), Range = c(1,7) )/5)
+dS$WISDM_WC = (varScore(dI, Forward= c('WISDM_2', 'WISDM_16', 'WISDM_31', 'WISDM_56', 'WISDM_61'), Range = c(1,7) )/5)
+dS$WISDM_TOT= (varScore(dI, Forward= c('WISDM_20', 'WISDM_36', 'WISDM_43', 'WISDM_48', 'WISDM_67','WISDM_5', 'WISDM_19', 'WISDM_26', 'WISDM_41', 'WISDM_55', 'WISDM_6', 'WISDM_28', 'WISDM_34', 'WISDM_62', 'WISDM_10', 'WISDM_21', 'WISDM_35', 'WISDM_38', 'WISDM_46','WISDM_49', 'WISDM_68', 'WISDM_13', 'WISDM_15', 'WISDM_24', 'WISDM_39', 'WISDM_57', 'WISDM_11', 'WISDM_29', 'WISDM_37', 'WISDM_50', 'WISDM_4', 'WISDM_17', 'WISDM_23', 'WISDM_40', 'WISDM_42','WISDM_51', 'WISDM_59', 'WISDM_7', 'WISDM_18', 'WISDM_25', 'WISDM_32', 'WISDM_58', 'WISDM_65', 'WISDM_3', 'WISDM_8', 'WISDM_45', 'WISDM_60', 'WISDM_64', 'WISDM_22', 'WISDM_30', 'WISDM_44', 'WISDM_52','WISDM_2', 'WISDM_16', 'WISDM_31', 'WISDM_56', 'WISDM_61','WISDM_9','WISDM_1', 'WISDM_12', 'WISDM_27', 'WISDM_33', 'WISDM_53', 'WISDM_66', 'WISDM_14', 'WISDM_47', 'WISDM_54', 'WISDM_63'), Range = c(1,7) )/68)

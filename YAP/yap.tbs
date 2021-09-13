@@ -1,0 +1,328 @@
+##I
+Select the answer that most accurately reflects your experience.
+##EI
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_1
+Have you driven a car when you knew you had too much to drink to drive safely?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time in past year
+2 times in past year
+3 times in past year
+4-6 times in past year
+7-11 times in past year
+12-20 times in past year
+21-39 times in past year
+40 or more times in past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_2
+Have you had a headache (hangover) the morning after you had been drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_3
+Have you felt sick to your stomach or thrown up after drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_4
+Have you showed up late for work or school because of drinking, a hangover, or an illness caused by drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_5
+Have you not gone to work or missed classes at school because of drinking, a hangover, or an illness caused by drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_6
+Have you gotten into physical fights when drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_7
+Have you ever gotten into trouble at work or school because of drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_8
+Have you ever been fired from a job or suspended or expelled from school because of your drinking?
+0	1	2	3	4	5	6	7	8	9
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 times
+4-6 times
+7-11 times
+12-20 times
+21-39 times
+40 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_9
+Have you damaged property, set off false alarms, or other things like that after you have been drinking?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_10
+Has your boyfriend/girlfriend (or spouse), parent(s), or other near relative ever complained to you about your drinking?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_11
+Has your drinking ever created problems between you and your boyfriend/girlfriend (or spouse) or another near relative?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_12
+Have you ever lost friends (including boyfriends or girlfriends) because of your drinking?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_13
+Have you ever neglected your obligations, your family, your work, or schoolwork for two or more days in a row because of drinking?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_14
+Has drinking ever gotten you into sexual situations which you later regretted?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_15
+Have you ever received a lower grade on an exam or paper than you should have because of your drinking?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_16
+Have you ever been arrested for drunken driving, driving while intoxicated, or driving under the influence of alcohol?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_17
+Have you ever been arrested, even for a few hours, because of other drunken behaviors?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_18
+Have you awakened the morning after a good bit of drinking and found that you could not remember part of the evening before?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_19
+Have you ever had "the shakes" after stopping or cutting down on drinking (for example, your hands shake so that you coffee cup rattles in the saucer or you have trouble lighting a cigarette)?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_20
+Have you ever felt like you needed a drink just after you'd gotten up (that is, before breakfast)?
+0	1	2	3	4
+No, never
+Yes, but not in the past year
+1 time
+2 times
+3 or more times
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_21
+Have you ever found you needed larger amounts of alcohol to feel any effect, or that you could no longer get high or drunk on the amount that used to get you high or drunk?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_22
+Have you ever felt that you needed alcohol or were dependent on alcohol?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_23
+Have you ever felt guilty about your drinking?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_24
+Has a doctor ever told you that your drinking was harming your health?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_25
+Have you ever gone to anyone for help to control your drinking?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_26
+Have you ever attended a meeting of Alcoholics Anonymous because of concern about your drinking?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+YAP_27
+Have you ever sought professional help for your drinking (for example, spoken to a physician, psychologist, psychiatrist, alcoholism counselor, or clergyman about your drinking)?
+0	1	2
+No, never
+Yes, but not in the past year
+Yes, in the past year
+##EQ
+------------------------------------------------------------------------------------------------------------
+##F
