@@ -1,0 +1,3 @@
+# Added dS and dI to match new scoring conventions- Megan F 2018_March
+
+dS$EES_TOT = varScore(dI, Forward= c('EES1', 'EES5', 'EES7', 'EES8',  'EES9', 'EES10', 'EES12', 'EES14', 'EES16', 'EES17', 'EES18', 'EES19', 'EES25', 'EES27', 'EES29', 'EES31'), Reverse= c('EES2', 'EES3', 'EES4', 'EES6', 'EES11', 'EES13', 'EES15', 'EES20', 'EES21', 'EES22', 'EES23', 'EES24', 'EES26', 'EES28', 'EES30', 'EES32', 'EES33'), Range = c(-4,4) )

@@ -1,0 +1,579 @@
+##I
+Directions: The items in this questionnaire refer to things and experiences that may cause fear or other similar, unpleasant feelings.  Read each item and decide how much you are disturbed by it nowadays.  Then, circle the number that most closely describes how disturbed you feel, using the scale provided.
+##EI
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_1
+Open Wounds
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_2
+Being alone
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_3
+Being in a strange place
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_4
+Dead people
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_5
+Speaking in public
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_6
+Crossing streets
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_7
+Falling
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_8
+Being Teased
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_9
+Failure
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_10
+Entering a room where other people are already seated
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_11
+High places on land
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_12
+People with deformities
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_13
+Worms
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_14
+Receiving injections
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------
+##LQ
+FSS_15
+Strangers
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_16
+Bats
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_17
+Journeys by train
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_18
+Journeys by bus
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_19
+Journeys by car
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_20
+People in authority
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_21
+Flying insects
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_22
+Seeing other people injected
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_23
+Crowds
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_24
+Large open spaces
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_25
+One person bullying another
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_26
+Tough-looking people
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_27
+Being watched working
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_28
+Dirt
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_29
+Crawling insects
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_30
+Sight of fighting
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_31
+Ugly people
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_32
+Sick people
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_33
+Being criticized
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_34
+Strange shapes
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_35
+Being in an elevator
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_36
+Witnessing surgical operations
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------
+##LQ
+FSS_37
+Mice
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_38
+Human blood
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_39
+Animal blood
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_40
+Enclosed places
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_41
+Feeling rejected by others
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_42
+Airplanes
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_43
+Medical odors
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_44
+Feeling disapproved of
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_45
+Harmless snakes
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_46
+Cemeteries
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_47
+Being ignored
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_48
+Nude men
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_49
+Nude women
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_50
+Doctors
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_51
+Making mistakes
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSS_52
+Looking foolish
+1	2	3	4	5
+Not at all
+A little
+A fair amount
+Much
+Very Much
+##EQ
+------------------------------------------------------------------------------------------------------------
+##F
+
+

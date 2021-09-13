@@ -1,0 +1,64 @@
+##I
+Please answer the following questions.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+FND1
+How soon after you wake up do you smoke your first cigarette?
+0	1	2	3
+Within 5 minutes
+6-30 minutes 
+31-60 minutes
+After 60 minutes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+FND2
+Do you find it difficult to refrain from smoking in places where it is forbidden (e.g. in church, at the library, in cinema, etc.)?
+0	1
+Yes
+No
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+FND3
+Which cigarette would you hate most to give up?
+0	1	
+The first one in the morning
+All others
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+FND4
+How many cigarettes per day do you smoke?
+0	1	2	3	
+10 or less
+11-20
+21-30
+31 or more
+##EQ
+--------------------------------------------------------------------------------
+##LQ
+FND5
+Do you smoke more frequently during the first hours after waking than during the rest of the day?
+0	1
+Yes
+No
+##EQ
+--------------------------------------------------------------------------------
+##LQ
+FND6
+Do you smoke if you are so ill that you are in bed most of the day?
+0	1	
+Yes
+No
+##EQ
+--------------------------------------------------------------------------------
+##F
+
+
+
+
+
+
+
