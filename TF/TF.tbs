@@ -1,0 +1,576 @@
+##I
+This questionnaire contains statements that different people might use to describe themselves. For each statement select the choice that describes you best. There are no right or wrong answers, just choose the answer that best describes you.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+TF_1
+I am easily frightened.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_2
+I'm not intimidated by anyone.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_3
+I would probably stay relaxed and outgoing when meeting a group of strangers, even if I were told they are unfriendly.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_4
+I recover more quickly than most people from minor illnesses or stress.
+0	1	2	3
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_5
+I am a good conversationalist.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_6
+I would find the job of movie stunt person exciting.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_7
+If I were a fire-fighter, I think that I might actually enjoy the excitement of trying to rescue someone from the top floor of a burning building.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_8
+I usually have good luck in whatever I try to do.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_9
+I almost always feel very sure of myself when I'm around other people.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_10
+I bet that it would be fun to pilot a small airplane alone.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_11
+When I want to, I can usually put fears and worries out of my mind.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_12
+Many people think of me as a daredevil.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_13
+I sometimes have difficulty standing up for my rights in social situations.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_14
+When I am in a frightening situation, I can "turn off" my fear almost at will.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_15
+I often feel insecure.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_16
+I find it easy to go up to someone I've never met and introduce myself.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_17
+I nearly always stay relaxed and carefree, even when nearly everyone else is fearful.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_18
+I am easily "rattled" at critical moments.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_19
+I am a squeamish person.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_20
+I become embarrassed more easily than most people.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_21
+I can remain calm in situations that would make many other people panic.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_22
+Usually I am more worried than most people that something might go wrong in the future.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_23
+I think that it might almost be exciting to be a passenger on a plane that appeared certain to crash, yet somehow managed to land safely.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_24
+I often feel tense and worried in unfamiliar situations, even when others feel there is no danger at all.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_25
+I usually am confident that everything will go well, even in situations that worry most people.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_26
+It takes me a long time to get over embarrassing or humiliating experiences
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_27
+I usually feel tense and worried when I have to do something new and unfamiliar.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_28
+I tend to be "thin-skinned" and overly sensitive to criticism.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_29
+I usually stay calm and secure in situations that most people would find physically dangerous.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_30
+I often avoid meeting strangers because I lack confidence with people I do not know.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_31
+When I get scared, I panic.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_32
+I have fewer fears than most people my age.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_33
+I have less energy and get tired more quickly than most people.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_34
+I am usually confident that I can easily do things that most people would consider dangerous (such as driving an automobile fast on a wet or icy road).
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_35
+I think I would stay confident and relaxed when meeting strangers, even if I were told they are angry at me.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_36
+If I am embarrassed or humiliated, I get over it very quickly.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_37
+Regardless of any temporary problem that I have to overcome, I always think it will turn out well.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_38
+I usually feel more confident and energetic than most peope, even after minor illnesses or stress.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_39
+I feel very confident and sure of myself in almost all social situations.
+0	1	2	3	
+True
+Mostly True
+Mostly False
+False
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_40
+I am easily flustered in pressured situations.
+0	1	2	3
+True 
+Mostly True
+Mostly False
+False
+##EQ
+-----------------------------------------------------------------------------------------------
+##I
+This questionnaire contains statements that different people might use to describe themselves. For each statement select the choice that describes you best. There are no right or wrong answers, just choose the answer that best describes you.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+TF_41
+(A) I would like to try surf-board riding. (B) I would not like to try surf-board riding.
+0	1	2	3	
+Definitely A
+Mostly A
+Mostly B
+Definitely B
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_42
+(A) I would like to try parachute jumping. (B) I would never want to try jumping out of a plane with or without a parachute.
+0	1	2	3	
+Definitely A
+Mostly A
+Mostly B
+Definitely B
+##EQ
+------------------------------------------------------------------------------------------------
+##I
+The items in this questionnaire refer to things and experiences that may cause fear or other similar, unpleasant feelings. Read each item and decide how much you are disturbed by it nowadays. Then, select the answer that most closely describes how disturbed you feel.
+##EI
+------------------------------------------------------------------------------------------------
+##LQ
+TF_43
+Journeys by car.
+1	2	3	4	5		
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_44
+Being in an elevator.
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_45
+Doctors
+1	2	3	4	5		
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_46
+Crowds
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_47
+Cemeteries
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_48
+Strangers
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_49
+Enclosed places
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_50
+Being teased
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_51
+Being in a strange place
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_52
+Being watched working
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_53
+Bats
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_54
+Being criticized
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+TF_55
+Feeling rejected by others
+1	2	3	4	5	
+Not at all
+A little
+A fair amount
+Much
+Very much
+##EQ
+------------------------------------------------------------------------------------------------
+##F

@@ -1,0 +1,11 @@
+COMPUTE TRI_Gov = mean.3(TRI_9,TRI_13,TRI_15) * 3 .
+
+COMPUTE TRI_Res = mean.3(TRI_3,TRI_10,TRI_14) * 3 .
+
+COMPUTE TRI_Emo = mean.3(TRI_1,TRI_2,TRI_6) * 3 .
+
+COMPUTE TRI_Cad = mean.3(TRI_5,TRI_8,TRI_12) * 3 .
+
+COMPUTE TRI_Cog = mean.3(TRI_4,TRI_7,TRI_11) * 3 .
+
+EXECUTE.
