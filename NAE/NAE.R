@@ -1,0 +1,6 @@
+#Added dS and dI to match new scoring conventions- Megan F 2018_March
+
+dS$NAE_SAME = varScore(dI, Forward= c('NAE1', 'NAE2', 'NAE3', 'NAE4', 'NAE5', 'NAE6', 'NAE7', 'NAE8', 'NAE9', 'NAE10', 'NAE11', 'NAE12', 'NAE13', 'NAE14', 'NAE15', 'NAE16', 'NAE17', 'NAE18', 'NAE19', 'NAE20', 'NAE21'), Range = c(1,5) )
+dS$NAE_NEXT = varScore(dI, Forward= c('NAE22', 'NAE23', 'NAE24', 'NAE25', 'NAE26', 'NAE27', 'NAE28', 'NAE29', 'NAE30', 'NAE31', 'NAE32', 'NAE33', 'NAE34', 'NAE35', 'NAE36', 'NAE37', 'NAE38', 'NAE39'), Range = c(1,5) )
+dS$NAE_CONT = varScore(dI, Forward= c('NAE40', 'NAE41', 'NAE42', 'NAE43', 'NAE44', 'NAE45', 'NAE46', 'NAE47', 'NAE48', 'NAE49', 'NAE50', 'NAE51', 'NAE52', 'NAE53', 'NAE54', 'NAE55', 'NAE56', 'NAE57', 'NAE58', 'NAE59', 'NAE60'), Range = c(1,5) )
+dS$NAE_TOT = varScore(dI, Forward= c('NAE1', 'NAE2', 'NAE3', 'NAE4', 'NAE5', 'NAE6', 'NAE7', 'NAE8', 'NAE9', 'NAE10', 'NAE11', 'NAE12', 'NAE13', 'NAE14', 'NAE15', 'NAE16', 'NAE17', 'NAE18', 'NAE19', 'NAE20', 'NAE21','NAE22', 'NAE23', 'NAE24', 'NAE25', 'NAE26', 'NAE27', 'NAE28', 'NAE29', 'NAE30', 'NAE31', 'NAE32', 'NAE33', 'NAE34', 'NAE35', 'NAE36', 'NAE37', 'NAE38', 'NAE39','NAE40', 'NAE41', 'NAE42', 'NAE43', 'NAE44', 'NAE45', 'NAE46', 'NAE47', 'NAE48', 'NAE49', 'NAE50', 'NAE51', 'NAE52', 'NAE53', 'NAE54', 'NAE55', 'NAE56', 'NAE57', 'NAE58', 'NAE59', 'NAE60'), Range = c(1,5) )
