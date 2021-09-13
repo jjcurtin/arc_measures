@@ -1,0 +1,62 @@
+##I
+Please answer the following questions about your demographics
+##EI
+------------------------------------------------------------------------------------------------
+##FQ
+DEM_1
+What is your AGE (in years)?
+0
+R
+16
+50
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+DEM_2
+What is your GENDER?
+0	1
+Female
+Male
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+DEM_3
+What is your RACE?
+1	2	3	4	5
+American Indian/Alaska Native
+Asian
+Native Hawaiian or Other Pacific Islander
+Black/African-American 
+White/Caucasian
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+DEM_4
+Are you of Hispanic/Latino origin?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------
+##LQ
+DEM_5
+Select your highest level of education completed?
+1	2	3	4	5	6
+Less than high school or GED degree
+High school or GED
+Some college
+2-Year degree
+College degree
+Advanced degree
+##EQ
+------------------------------------------------------------------------------------------------
+##FQ
+DEM_6
+Please fill in your approximate personal income per year?  $
+0
+R
+0
+300000
+##EQ
+------------------------------------------------------------------------------------------------
+##F

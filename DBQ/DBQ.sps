@@ -1,0 +1,34 @@
+VALUE LABELS DBQ1 1 'Beer' 2 'Wine' 3 'Mixed Drinks' 4 'Straight Drinks' 5 'Other'.
+RENAME VARIABLE (DBQ1 = DBQ_BevType).
+EXECUTE.
+
+RECODE DBQ2 (1=.25) (2=.625) (3=1) (4=2) (5=3.5) (6=5.5) (7=7.5) (8=10.5) (9=17) (10=21) INTO 
+    DBQ_FREQ.
+EXECUTE .
+
+RECODE DBQ3 (1=.5) (2=1) (3=2) (4=3) (5=4) (6=5) (7=6) (8=8) (9=11) (10=13) INTO DBQ_QUAN.
+EXECUTE.
+
+RECODE DBQ4 (1=.25) (2=.375) (3=.75) (4=1) (5=2) (6=3) (7=4) (8=6) (9=9) (10=11) INTO DBQ_RTLG.
+EXECUTE.
+
+RENAME VARIABLE (DBQ5 = DBQ_Rate_BeforeCurrent).
+EXECUTE.
+
+RECODE DBQ6 (1=.125) (2=.25) (3=.5) (4=.75) (5=1) (6=2) (7=3) (8=4) (9=6) (10=8) INTO DBQ_FRHG.
+EXECUTE.
+
+RECODE DBQ7 (1=0) (2=1) (3=2) (4=3) (5=4) (6=5) (7=6) (8=8) (9=11) (10=13) INTO DBQ_QNHG.
+EXECUTE.
+
+RECODE DBQ8 (1=.125) (2=.25) (3=.5) (4=.75) (5=1) (6=2) (7=3) (8=4) (9=6) (10=8) INTO DBQ_FRDK.
+EXECUTE.
+
+RECODE DBQ9 (1=0) (2=1) (3=2) (4=3) (5=4) (6=5) (7=6) (8=8) (9=11) (10=13) INTO DBQ_QNDK.
+EXECUTE .
+
+RENAME VARIABLE (DBQ10 = DBQ_HoldLiquor).
+EXECUTE .
+
+DELETE VARIABLES DBQ2 DBQ3 DBQ4 DBQ6 DBQ7 DBQ8 DBQ9.
+EXECUTE .

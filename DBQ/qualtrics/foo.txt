@@ -1,0 +1,147 @@
+[[AdvancedFormat]]
+[[Block:DBQ]]
+
+[[Question:MC]]
+[[ID:DBQ1]]
+What type of alcoholic beverage do you consume most often when you drink?
+
+[[Choices]]
+Beer
+Wine
+Mixed drinks (hard liquor and nonalcoholic mixer)
+Straight drinks (hard liquor alone or with ice only)
+Other
+
+[[Question:MC]]
+[[ID:DBQ2]]
+On the average, how often do you consume alcoholic beverages of any kind?  (Note: Each "time" or drinking occasion must be seperated by a period during which you become completely sober again.)
+
+[[Choices]]
+Once a month or less
+2 or 3 times a month
+Once a week
+Twice a week
+3 or 4 times a week
+5 or 6 times a week
+7 or 8 times a week
+9-13 times a week
+14-20 times a week
+21 or more times a week
+
+[[Question:MC]]
+[[ID:DBQ3]]
+On the average, how many "drinks" do you have each "time" or on each occasion when you do consume alcoholic beverages? (Note: one "drink" = one 12 ounce beer or one 5 ounce glass of wine or a single and 1.5 ounce shot of hard liquor, straight or with mixer.)
+
+[[Choices]]
+Less than one whole drink
+One "drink"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+
+[[Question:MC]]
+[[ID:DBQ4]]
+About how long have you been drinking at your present rate?
+
+[[Choices]]
+3 months or less
+3-6 months
+6-12 months
+1 year
+2 years
+3 years
+4 years
+5-7 years
+8-10 years
+More than 10 years
+
+[[Question:MC]]
+[[ID:DBQ5]] 
+What was your rate of alcohol consumption before you established your current level?
+
+[[Choices]]
+I did not drink at all then
+I used to drink much less
+I used to drink somewhat less
+I used to drink somewhat more
+I used to drink much more
+
+[[Question:MC]]
+[[ID:DBQ6]] 
+On the average, how often do you get at least "somewhat high" or "somewhat intoxicated" from drinking alcoholic beverages?
+
+[[Choices]]
+Less than once a month
+Once a month
+2 times a month
+3 times a month
+Once a week
+2 times a week
+3 times a week
+4 times a week
+5-7 times a week
+More than 7 times a week
+
+[[Question:MC]]
+[[ID:DBQ7]] 
+When you get "somewhat high" or "somewhat intoxicated," how many "drinks" does it usually take? (Remember: one "drink"=1 beer, 1 glass of wine, or 1 single shot-straight or mixed.)
+
+[[Choices]]
+I have never felt somewhat high or intoxicated
+1 or fewer "drinks"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+
+[[Question:MC]]
+[[ID:DBQ8]] 
+On the average, how often do you get "drunk"?
+
+[[Choices]]
+Less than once a month (including never) 
+Once a month
+2 times a month
+3 times a month
+Once a week
+2 times a week
+3 times a week
+4 times a week
+5-7 times a week
+More than 7 times a week
+
+[[Question:MC]]
+[[ID:DBQ9]] 
+When you do get "drunk", how many "drinks" does it usually take?  (Remember: one "drink"= 1 beer, 1 glass of wine, or 1 single shot-straight or mixed.)
+
+[[Choices]]
+I have never been drunk
+1 or fewer "drinks"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+
+[[Question:MC]]
+[[ID:DBQ10]] 
+In comparison to the average person of your same age, sex, and body weight, how well would you say you "hold your liquor?"
+
+[[Choices]]
+I can drink much less before I am affected
+I can drink somewhat less before I am affected
+I can drink about the same amount before I am affected
+I can drink somewhat more before I am affected
+I can drink much more before I am affected

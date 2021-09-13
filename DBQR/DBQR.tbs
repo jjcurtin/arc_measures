@@ -1,0 +1,166 @@
+##I
+For each of the items below indicate the alternative that best describes your drinking behavior. Please complete every item, making your best guess if you are unsure.
+##EI
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR1
+What type of alcoholic beverage do you consume most often when you drink?
+1	2	3	4	5
+Beer
+Wine
+Mixed drinks (hard liquor and nonalcoholic mixer)
+Straight drinks (hard liquor alone or with ice only)
+Other
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR2
+On the average, how often do you consume alcoholic beverages of any kind?  (Note: Each "time" or drinking occasion must be seperated by a period during which you become completely sober again.)
+1	2	3	4	5	6	7	8	9	10
+Once a month or less
+2 or 3 times a month
+Once a week
+Twice a week
+3 or 4 times a week
+5 or 6 times a week
+7 or 8 times a week
+9-13 times a week
+14-20 times a week
+21 or more times a week
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR3
+On the average, how many "drinks" do you have each "time" or on each occasion when you do consume alcoholic beverages? (Note: one "drink" = one 12 ounce beer or one 5 ounce glass of wine or a single and 1.5 ounce shot of hard liquor, straight or with mixer.)
+1	2	3	4	5	6	7	8	9	10
+Less than one whole drink
+One "drink"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR4
+About how long have you been drinking at your present rate?
+1	2	3	4	5	6	7	8	9	10
+3 months or less
+3-6 months
+6-12 months
+1 year
+2 years
+3 years
+4 years
+5-7 years
+8-10 years
+More than 10 years
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR5
+What was your rate of alcohol consumption before you established your current level?
+1	2	3	4	5
+I did not drink at all then
+I used to drink much less
+I used to drink somewhat less
+I used to drink somewhat more
+I used to drink much more
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR6
+On the average, how often do you get at least "somewhat high" or "somewhat intoxicated" from drinking alcoholic beverages?
+1	2	3	4	5	6	7	8	9	10
+Less than once a month
+Once a month
+2 times a month
+3 times a month
+Once a week
+2 times a week
+3 times a week
+4 times a week
+5-7 times a week
+More than 7 times a week
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR7
+When you get "somewhat high" or "somewhat intoxicated," how many "drinks" does it usually take? (Remember: one "drink"=1 beer, 1 glass of wine, or 1 single shot-straight or mixed.)
+1	2	3	4	5	6	7	8	9	10
+I have never felt somewhat high or intoxicated
+1 or fewer "drinks"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR8
+On the average, how often do you get "drunk"?
+1	2	3	4	5	6	7	8	9	10
+Less than once a month (including never) 
+Once a month
+2 times a month
+3 times a month
+Once a week
+2 times a week
+3 times a week
+4 times a week
+5-7 times a week
+More than 7 times a week
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR9
+When you do get "drunk", how many "drinks" does it usually take?  (Remember: one "drink"= 1 beer, 1 glass of wine, or 1 single shot-straight or mixed.)
+1	2	3	4	5	6	7	8	9	10
+I have never been drunk
+1 or fewer "drinks"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5 "drinks"
+6 "drinks"
+7-9 "drinks"
+10-12 "drinks"
+More than 12 "drinks"
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR10
+What is the maximum number of drinks that you have consumed in one drinking occasion?  (Note: one "drink" equals one 12 ounce beer or one 5 ounce glass of winde or one 1.5 ounce shot of hard liquor, straight or with mixer.)
+1	2	3	4	5	6	7	8	9	10
+Less than one whole drink
+1 "drink"
+2 "drinks"
+3 "drinks"
+4 "drinks"
+5-6 "drinks"
+7-9 "drinks"
+10-14 "drinks"
+15-18 "drinks"
+More than 18 "drinks"
+##EQ
+-----------------------------------------------------------------------------------------
+##LQ
+DBQR11
+In comparison to the average person of your same age, sex, and body weight, how well would you say you "hold your liquor?"
+1	2	3	4	5
+I can drink much less before I am affected
+I can drink somewhat less before I am affected
+I can drink about the same amount before I am affected
+I can drink somewhat more before I am affected
+I can drink much more before I am affected
+##EQ
+-----------------------------------------------------------------------------------------
+##F
