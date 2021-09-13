@@ -1,0 +1,808 @@
+##I
+Please answer each question honestly and accurately.  Answers will be completely confidential.
+##EI
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_1
+Have you ever smoked a cigarrete, even a puff?
+0	1
+No
+Yes
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##FQ
+SHQ_2
+How old were you when you first tried a cigarette?(years old)
+0
+R
+1
+50
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_3
+Where did you first smoke?
+0	1	2	3	4
+Home
+School
+On The Job
+Don't Remember
+Other
+##EQ
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##CQ
+5
+With whom did you first smoke?
+SHQ_4a
+SHQ_4b
+SHQ_4c
+SHQ_4d
+SHQ_4e
+Friends/Peers
+Family
+Alone
+Don't Remember
+Other
+##EQ
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_5
+In general, how much did you enjoy smoking your first cigarette?
+0	1	2	3	4
+A Lot
+Some
+A Little
+Not At All
+Don't Remember
+##EQ
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_6
+How long was it before you smoked your second cigarette?
+0	1	2	3	4	5	6	7	
+On The Same Day
+Within A Week
+Within A Month
+Within 6 Months
+Within A Year
+Over A Year
+Don't Remember
+Never Smoked A Second Cigarette
+##EQ
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##I
+Rate each of the following reactions in accordance with your first cigarette?
+##EI
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_7
+Pleasant Sensations
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_8
+Unpleasant Sensations
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_9
+How much nausea you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_10
+How much relaxation you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_11
+How much dizziness you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_12
+How much of a pleasurable rush or buzz you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_13
+How much coughing you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ 
+SHQ_14
+How much difficulty inhaling you experienced
+0	1	2	3	4	
+None
+Slight
+Moderate
+Intense
+Don't Remember
+##EQ
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_15
+Have you smoked 100 or more cigarettes in your lifetime?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_16
+Have you EVER smoked cigarettes on a daily basis?
+0	1
+No
+Yes
+##EQ
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##FQ
+SHQ_17
+How old were you when you started smoking cigarettes daily?
+0
+R
+1
+50
+##EQ
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##FQ
+SHQ_18
+For about how many years have you smoked everyday?(Do not count periods when you did not smoke)
+0
+R
+1
+100
+##EQ
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_19
+On the average, how much of each cigarette do you smoke?
+0	1	2
+Less Than Half
+About Half
+Most Or All Of It
+##EQ
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+##LQ
+SHQ_20
+How deeply do you inhale the smoke?
+0	1	2	3
+Very Little
+Somewhat
+A Moderate Amount
+Quite Deeply
+##EQ
+-------------------------------------------------------------------------------------------------
+##FQ
+SHQ_21
+On the average, how many cigarettes per day have you smoked in the past 3 months?(Note: 20 cigarettes= 1 pack)
+0
+R
+1
+1000
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_22
+Are you currently smoking one or more cigarettes on most days?
+0	1
+No
+Yes
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_23
+Have you quit smoking cigarettes completely?
+0	1
+No
+Yes
+##EQ
+-------------------------------------------------------------------------------------------------
+##FQ
+SHQ_24
+When was the last time you smoked a cigarette?
+Enter number of days, months, or years ago from today
+1
+N
+##EQ
+-------------------------------------------------------------------------------------------------
+##I
+If you currently smoke...answer the following questions based on your usual smoking patterns.  If you used to smoke but quit...answer the questions for the period when you smoked cigarettes.
+##EI
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_25
+I smoke in order to keep myself from slowing down.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_26
+Handling a cigarette is part of the enjoyment of smoking it.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_27
+I smoke for the pleasure of having something to put in my mouth.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_28
+I want to smoke most when I am comfortable and relaxed.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_29
+Part of the enjoyment of smoking is watching the smoke as I blow it out.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_30
+Smoking helps me to focus on tasks.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_31
+I smoke more when I am worried about something.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_32
+Ismoke to keep from gaining weight.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_33
+I like smoking while I am busy and working hard.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_34
+I smoke for the pleasure of offering and accepting cigarettes from other people.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_35
+When I have run out of cigarettes, I find it almost unbearable until I can get them.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_36
+I smoke automatically without even being aware of it.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_37
+I feel I look more mature and sophisticaed when smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_38
+Smoking helps to keep me going when I'm tired.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_39
+I smoke cigarettes to stimulate me, to perk me up.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_40
+Smoking helps me control my appetite.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_41
+Part of the enjoyment of smoking comes from the steps I take to light up.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_42
+One reason I smoke is because it tastes so good.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_43
+Sometimes I light up without even thinking about whether I want or need a cigarette.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_44
+I tend to smoke more when I am feeling sad or depressed.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_45
+Cigarettes help me to cope with stressful situations that are not under my control.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_46
+I smoke to help me stay focused when I am tired and working hard.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_47
+Smoking a cigarette makes a good time even better.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_48
+I enjoy smoking when I am with friends or family members who smoke.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_49
+After meals is the time I most enjoy smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_50
+Smoking helps me to think and concentrate.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_51
+Iam very much aware of the fact when I am not smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_52
+It is easier to talk and get to know other people when smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_53
+I don't get so hungry when I smoke.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_54
+I smoke cigarettes to give me a "lift".
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_55
+I light up a cigarette without even realzing that I still have one burning in the ashtray.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_56
+Smoking cheers me up.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_57
+I like smoking best when I am having a quiet rest.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_58
+While smoking I feel more confident with other people.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_59
+I get a definite lift and feel more alert when smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_60
+Without a cigarette I don't know what to do with my hands.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_61
+I've found a cigarette in my mouth without recalling putting it there.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_62
+I only really enjoy smoking with a drink.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_63
+I smoke much more when I am with other people.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_64
+I smoke because I like the smell so much.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_65
+I usually only smoke when I can really sit back and enjoy it.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_66
+I light up a cigarette when I feel angry about something.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_67
+I find it a pleasure drawing the smoke into my lungs.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_68
+I get a real gnawing hunger to smoke when I haven't smoked for a while.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_69
+I find myself smoking without remembering lighting up.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_70
+Smoking calms me down when I feel tense.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_71
+I smoke more when I am rushed and have lots to do.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_72
+I feel more attractive to the opposite sex when smoking.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_73
+I smoke because it is a legal substance and it is my right.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_74
+I smoke because I want to.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_75
+I think that the tendency to smoke might run in families.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_76
+I think some people are more prone to smoke than others.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##LQ
+SHQ_77
+I think tobacco smoking is like a drug addiction.
+0	1	2	3
+Not at all
+A Little
+Quite A Bit
+Very Much So
+##EQ
+-------------------------------------------------------------------------------------------------
+##CQ
+9
+Please place and X next to all the items that describe situations in which you have smoked at least occasionally.
+SHQ_78a
+SHQ_78b
+SHQ_78c
+SHQ_78d
+SHQ_78e
+SHQ_78f
+SHQ_78g
+SHQ_78h
+SHQ_78i
+at a bar
+on breaks at school or work
+with friends
+when you are alone
+at home
+in the car
+in restaurants
+while eating
+while drinking alcohol
+##EQ
+------------------------------------------------------------------------------------------------
+##F

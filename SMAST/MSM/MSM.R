@@ -1,0 +1,1 @@
+MSM_TOT = varScore(d, Forward= c('MSM2', 'MSM3', 'MSM6', 'MSM7', 'MSM8', 'MSM9', 'MSM10', 'MSM11', 'MSM12', 'MSM13'), Reverse= c('MSM1', 'MSM4', 'MSM5'), Range= c(0,1) )

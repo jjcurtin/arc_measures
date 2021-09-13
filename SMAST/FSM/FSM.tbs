@@ -1,0 +1,109 @@
+##I
+The next set of items concern problems that your father may have had with alcohol.  We understand that you may not feel sure about the answers to these questions, but please check the response that you think is the best for each.
+##EI
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_1
+Do you feel that your father is a normal drinker?  (By normal, we mean does he drink less than or as much as most other people?)
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_2
+Did your mother, your grandparents, or other near relatives ever complain about your father's drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_3
+Did your father ever feel guilty about his drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_4
+Did friends and relatives ever feel guilty about your father's drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_5
+Was your father able to stop drinking when he wanted to?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_6
+Did your father ever attend a meeting of Alcoholics Anonymous?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_7
+Did your father's drinking ever create problems between him, your mother, or other near relative?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_8
+Has your father ever gotten into trouble at work because of his drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_9
+Has your father ever neglected his obligations, family, or work for two or more days in a row because he was drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_10
+Has your father ever gone to anyone for help with his drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_11
+Has your father ever been in a hospital because of his drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_12
+Has your father ever been arrested for drunk driving, driving while intoxicated, or drinking under the influence of alcoholic beverages?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+FSM_13
+Has your father ever been arrested, even for a few hours, because of his drunken behavior?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##F

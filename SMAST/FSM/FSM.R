@@ -1,0 +1,1 @@
+FSM_TOT = varScore(d, Forward= c('FSM2', 'FSM3', 'FSM6', 'FSM7', 'FSM8', 'FSM9', 'FSM10', 'FSM11', 'FSM12', 'FSM13'), Reverse= c('FSM1', 'FSM4', 'FSM5'), Range= c(0,1) )

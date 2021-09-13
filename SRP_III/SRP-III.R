@@ -1,0 +1,7 @@
+# Added dS and dI to match new scoring conventions- Megan F 2018_March
+
+dS$SRP_IPM = varScore(dI, Forward= c('SRP3', 'SRP8', 'SRP13', 'SRP20', 'SRP27','SRP35', 'SRP41', 'SRP45', 'SRP50', 'SRP54', 'SRP58'), Reverse= c('SRP16', 'SRP24', 'SRP31', 'SRP38', 'SRP61'), Range = c(1,5) )
+dS$SRP_CA = varScore(dI, Forward= c('SRP2', 'SRP7', 'SRP15', 'SRP30','SRP33', 'SRP37', 'SRP40', 'SRP48','SRP53', 'SRP56', 'SRP60'), Reverse = c('SRP11', 'SRP19','SRP23', 'SRP26', 'SRP44'), Range = c(1,5) )
+dS$SRP_ELS = varScore(dI, Forward= c('SRP1', 'SRP4', 'SRP9', 'SRP17', 'SRP28','SRP32', 'SRP39', 'SRP42', 'SRP51', 'SRP55', 'SRP59'), Reverse = c('SRP14', 'SRP22', 'SRP25', 'SRP36', 'SRP47'), Range = c(1,5) )
+dS$SRP_ASB = varScore(dI, Forward= c('SRP10', 'SRP12', 'SRP29', 'SRP43', 'SRP49','SRP52', 'SRP57', 'SRP62', 'SRP63', 'SRP64'), Reverse = c('SRP5','SRP6', 'SRP18', 'SRP21', 'SRP34', 'SRP46'), Range = c(1,5))
+dS$SRP_TOT = varScore(dI, Forward= c('SRP3', 'SRP8', 'SRP13', 'SRP20', 'SRP27','SRP35', 'SRP41', 'SRP45', 'SRP50', 'SRP54', 'SRP58','SRP2', 'SRP7', 'SRP15', 'SRP30','SRP33', 'SRP37', 'SRP40', 'SRP48','SRP53', 'SRP56', 'SRP60','SRP1', 'SRP4', 'SRP9', 'SRP17', 'SRP28','SRP32', 'SRP39', 'SRP42', 'SRP51', 'SRP55', 'SRP59','SRP10', 'SRP12', 'SRP29', 'SRP43', 'SRP49','SRP52', 'SRP57', 'SRP62', 'SRP63', 'SRP64'), Reverse = c('SRP5','SRP6', 'SRP18', 'SRP21', 'SRP34', 'SRP46','SRP16', 'SRP24', 'SRP31', 'SRP38', 'SRP61','SRP11', 'SRP19','SRP23', 'SRP26', 'SRP44','SRP14', 'SRP22', 'SRP25', 'SRP36', 'SRP47'), Range = c(1,5) )

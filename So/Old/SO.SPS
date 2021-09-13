@@ -1,0 +1,24 @@
+COMPUTE so3r = 1-so3 .
+COMPUTE so6r = 1-so6 .
+COMPUTE so7r = 1-so7 .
+COMPUTE so10r = 1-so10 .
+COMPUTE so12r = 1-so12 .
+COMPUTE so15r = 1-so15 .
+COMPUTE so16r = 1-so16 .
+COMPUTE so17r = 1-so17 .
+COMPUTE so19r = 1-so19 .
+COMPUTE so20r = 1-so20 .
+COMPUTE so22r = 1-so22 .
+COMPUTE so24r = 1-so24 .
+COMPUTE so25r = 1-so25 .
+COMPUTE so27r = 1-so27 .
+COMPUTE so32r = 1-so32 .
+COMPUTE so34r = 1-so34 .
+COMPUTE so37r = 1-so37 .
+COMPUTE so39r = 1-so39 .
+COMPUTE so40r = 1-so40 .
+COMPUTE so44r = 1-so44 .
+COMPUTE so48r = 1-so48 .
+COMPUTE so52r = 1-so52 .
+COMPUTE so_tot = mean.41(so1,so2,so3r,so4,so5,so6r,so7r,so8,so9,so10r,so11,so12r,so13,so14,so15r,so16r,so17r,so18,so19r,so20r,so21,so22r,so23,so24r,so25r,so26,so27r,so28,so29,so30,so31,so32r,so33,so34r,so35,so36,so37r,so38,so39r,so40r,so41,so42,so43,so44,so45,so46,so47,so48r,so49,so50,so51,so52r,so53,so54) *54.
+EXECUTE .

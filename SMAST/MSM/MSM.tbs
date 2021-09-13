@@ -1,0 +1,110 @@
+##I
+The next set of items concern problems that your mother may have had with alcohol.  We understand that you may not feel sure about the answers to these questions, but please check the response that you think is the best for each.
+##EI
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_1
+Do you feel that your mother is a normal drinker?  (By normal, we mean does she drink less than or as much as most other people?)
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_2
+Did your father, your grandparents, or other near relatives ever complain about your mother's drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_3
+Did your mother ever feel guilty about her drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_4
+Did friends and relatives ever feel guilty about your mother's drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_5
+Was your mother able to stop drinking when she wanted to?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_6
+Did your mother ever attend a meeting of Alcoholics Anonymous?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_7
+Did your mother's drinking ever create problems between her, your father, or other near relative?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_8
+Has your mother ever gotten into trouble at work because of her drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_9
+Has your mother ever neglected her obligations, family, or work for two or more days in a row because she was drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_10
+Has your mother ever gone to anyone for help with her drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_11
+Has your mother ever been in a hospital because of her drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_12
+Has your mother ever been arrested for drunk driving, driving while intoxicated, or drinking under the influence of alcoholic beverages?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+MSM_13
+Has your mother ever been arrested, even for a few hours, because of other drunken behavior?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##F
+

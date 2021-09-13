@@ -1,0 +1,111 @@
+##I
+Answer the following questions:
+##EI
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_1
+Do you feel you are a normal drinker?  (By normal, we mean do you drink less than or as much as most other people?)
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_2
+Do those close to you ever worry or complain about your drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_3
+Do you ever feel guilty about your drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_4
+Do friends and relatives think you are a normal drinker?
+0	1
+NO
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_5
+Are you able to stop drinking when you want to?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_6
+Have you ever attended a meeting of Alcoholics Anonymous?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_7
+Has drinking ever created problems between you and your wife, husband, a parent, or other near relative?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_8
+Have you ever gotten into trouble at work because of your drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_9
+Have you ever neglected your obligations, your family, or your work for two or more days in a row because you were drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_10
+Have you ever gone to anyone for help about your drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_11
+Have you ever been in a hospital because of your drinking?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_12
+Have you ever been arrested for drunken driving, driving while intoxicated, or driving under the influence of alcoholic beverages?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##LQ
+SMA_13
+Have you ever been arrested, even for a few hours, because of other drunken behaviors?
+0	1
+No
+Yes
+##EQ
+------------------------------------------------------------------------------------------------------------
+##F
+
+
