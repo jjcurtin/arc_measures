@@ -1,0 +1,5 @@
+MCQ_Com = varScore(d, Forward= c('MCQ12_2', 'MCQ12_7', 'MCQ12_10'), Range = c(1,7) )
+MCQ_Emo = varScore(d, Forward= c('MCQ12_4', 'MCQ12_6', 'MCQ12_9'), Range = c(1,7) )
+MCQ_Exp = varScore(d, Forward= c('MCQ12_5', 'MCQ12_11', 'MCQ12_12'), Range = c(1,7) )
+MCQ_Pur = varScore(d, Forward= c('MCQ12_1', 'MCQ12_3', 'MCQ12_8',), Range = c(1,7) )
+MCQ_Tot = varScore(d, Forward= c('MCQ12_1', 'MCQ12_2', 'MCQ12_3', 'MCQ12_4', 'MCQ12_5','MCQ12_6', 'MCQ12_7', 'MCQ12_8', 'MCQ12_9','MCQ12_10', 'MCQ12_11', 'MCQ12_12'), Range = c(1,7) )
