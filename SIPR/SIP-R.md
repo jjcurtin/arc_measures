@@ -1,0 +1,21 @@
+Short Inventory of Problems Revised (SIP-R)
+
+1. I have been unhappy because of my drinking or drug use. (INTRA)
+2. Because of my drinking or drug use, I have lost weight or not eaten properly. (PHYS)
+3. I have failed to do what is expected of me because of my drinking or drug use. (SOC)
+4. I have felt guilty or ashamed because of my drinking or drug use. (INTRA)
+5. I have taken foolish risks when I have been drinking or using drugs. (IMP)
+6. When drinking or using drugs, I have done impulsive things that I regretted later. (IMP)
+7. Drinking or using one drug has caused me to use other drugs more.* (IMP)
+8. I have gotten into trouble because of drinking or drug use.* (SOC)
+9. The quality of my work has suffered because of my drinking or drug use.* (SOC)
+10. My physical health has been harmed by my drinking or drug use. (PHYS)
+11. I have had money problems because of my drinking or drug use. (SOC)
+12. My physical appearance has been harmed by my drinking or drug use. (PHYS)
+13. My family has been hurt by my drinking or drug use. (INTER)
+14. A friendship or close relationship has been damaged by my drinking or drug use. (INTER)
+15. My drinking or drug use has gotten in the way of my growth as a person. (INTRA)
+16. My drinking or drug use has damaged my social life, popularity, or reputation. (INTER)
+17. I have spent too much or lost a lot of money because of my drinking or drug use. (SOC)
+
+Responses: “never,” “once or a few times,” “once or twice a week,” “daily or almost daily”; scored 0-3
